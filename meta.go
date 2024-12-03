@@ -630,14 +630,33 @@ const (
 	Constructed Type = "Constructed"
 	Ancient     Type = "Ancient"
 
-	Africa  Region = "Africa"
-	Eurasia Region = "Eurasia"
-	Georgia Region = "Georgia"
+	Africa       Region = "Africa"
+	Australia    Region = "Australia"
+	Europe       Region = "Europe"
+	Eurasia      Region = "Eurasia"
+	Asia         Region = "Asia"
+	CentralAsia  Region = "Central Asia"
+	NorthAmerica Region = "North America"
+	SouthAmerica Region = "South America"
+	Oceania      Region = "Oceania"
+	Caucasus     Region = "Caucasus"
+	Georgia      Region = "Georgia"
+	India        Region = "India"
+	China        Region = "China"
+	MiddleEast   Region = "Middle East"
 
-	LatinScript    Script = "Latin"
-	Cyrillic       Script = "Cyrillic"
-	GeorgianScript Script = "Georgian"
-	HebrewScript   Script = "Hebrew"
+	LatinScript     Script = "Latin"
+	Cyrillic        Script = "Cyrillic"
+	GeorgianScript  Script = "Georgian"
+	HebrewScript    Script = "Hebrew"
+	AngloSaxonRunes Script = "Anglo-Saxon runes"
+	ArabicScript    Script = "Arabic"
+	Devanagari      Script = "Devanagari"
+	Brahmi          Script = "Brahmi"
+	PersianScript   Script = ArabicScript // Will simplify search.
+	PashtoScript    Script = ArabicScript // Will simplify search.
+	MongolianScript Script = "Mongolian"
+	ArmenianScript  Script = "Armenian"
 
 	NorthwestCaucasian    Family = "Northwest Caucasian"
 	NigerCongo            Family = "Niger–Congo"
@@ -657,6 +676,8 @@ const (
 	PamaNyungan           Family = "Pama–Nyungan"
 	TaiKadai              Family = "Tai–Kadai"
 	Arawakan              Family = "Arawakan"
+	Turkic                Family = "Turkic"
+	Mongolic              Family = "Mongolic"
 )
 
 // LanguageMap is the list of language codes mapped to their model.

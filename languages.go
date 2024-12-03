@@ -5,7 +5,7 @@ var (
 		Codes:       []string{"ab", "abk"},
 		EnglishName: "Abkhazian",
 		Scope:       Individual,
-		Regions:     []Region{Eurasia, Georgia},
+		Regions:     []Region{Eurasia, Georgia, Caucasus, Europe},
 		Scripts:     []Script{LatinScript, Cyrillic, GeorgianScript},
 		Family:      NorthwestCaucasian,
 		NativeNames: []string{"Аҧсуа", "Apsua", "აფსუა", "Abkhaz"}}
@@ -45,7 +45,11 @@ var (
 	Arabic = Language{
 		Codes:       []string{"ar", "ara"},
 		EnglishName: "Arabic",
+		Type:        Living,
 		Scope:       Macro,
+		Scripts:     []Script{ArabicScript, LatinScript},
+		Family:      Afroasiatic,
+		Regions:     []Region{Africa, Asia, Eurasia, MiddleEast},
 		NativeNames: []string{"اَلْعَرَبِيَّةُ", "al-ʿarabiyyah"},
 		Variants: []Variant{
 			{Code: "aao", EnglishName: "Algerian Saharan Arabic"},
@@ -285,7 +289,11 @@ var (
 	English = Language{
 		Codes:       []string{"en", "eng"},
 		EnglishName: "English",
+		Type:        Living,
 		Scope:       Individual,
+		Scripts:     []Script{LatinScript, AngloSaxonRunes},
+		Family:      IndoEuropean,
+		Regions:     []Region{Europe, Oceania, NorthAmerica, SouthAmerica, Africa, Asia, Eurasia, India},
 	}
 	Esperanto = Language{
 		Codes:       []string{"eo", "epo"},
@@ -570,7 +578,11 @@ var (
 	Kurdish = Language{
 		Codes:       []string{"ku", "kur"},
 		EnglishName: "Kurdish",
+		Type:        Living,
 		Scope:       Macro,
+		Family:      IndoEuropean,
+		Scripts:     []Script{LatinScript, ArabicScript, Cyrillic},
+		Regions:     []Region{Asia, Europe, Eurasia, Caucasus},
 		NativeNames: []string{"Kurdî", "کوردی"},
 		Variants: []Variant{
 			{Code: "ckb", EnglishName: "Central Kurdish"},
@@ -715,7 +727,11 @@ var (
 	Mongolian = Language{
 		Codes:       []string{"mn", "mon"},
 		EnglishName: "Mongolian",
+		Type:        Living,
 		Scope:       Macro,
+		Family:      Mongolic,
+		Regions:     []Region{Asia},
+		Scripts:     []Script{MongolianScript, Cyrillic},
 		NativeNames: []string{"ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ", "Монгол хэл", "Mongol xel"},
 		Variants: []Variant{
 			{Code: "khk", EnglishName: "Halh Mongolian"},
@@ -756,7 +772,11 @@ var (
 	Norwegian = Language{
 		Codes:       []string{"no", "nor"},
 		EnglishName: "Norwegian",
+		Type:        Living,
 		Scope:       Macro,
+		Regions:     []Region{Europe, Eurasia},
+		Family:      IndoEuropean,
+		Scripts:     []Script{LatinScript},
 		NativeNames: []string{"Norsk"},
 		Variants: []Variant{
 			{Code: "nno", EnglishName: "Norwegian Nynorsk"},
@@ -810,7 +830,11 @@ var (
 	Pashto = Language{
 		Codes:       []string{"ps", "pus"},
 		EnglishName: "Pashto",
+		Type:        Living,
 		Scope:       Macro,
+		Family:      IndoEuropean,
+		Regions:     []Region{MiddleEast, CentralAsia, Eurasia, Asia},
+		Scripts:     []Script{PashtoScript},
 		NativeNames: []string{"Pushto", "پښتو", "Pax̌tow"},
 		Variants: []Variant{
 			{Code: "pbt", EnglishName: "Southern Pashto"},
@@ -819,7 +843,11 @@ var (
 	Persian = Language{
 		Codes:       []string{"fa", "fas", "per"},
 		EnglishName: "Persian",
+		Type:        Living,
 		Scope:       Macro,
+		Family:      IndoEuropean,
+		Regions:     []Region{MiddleEast, CentralAsia, Eurasia},
+		Scripts:     []Script{PersianScript},
 		NativeNames: []string{"فارسی", "Fārsiy"},
 		Variants: []Variant{
 			{Code: "pes", EnglishName: "Iranian Persian"},
@@ -929,7 +957,11 @@ var (
 	Sanskrit = Language{
 		Codes:       []string{"sa", "san"},
 		EnglishName: "Sanskrit",
+		Type:        Ancient,
 		Scope:       Macro,
+		Family:      IndoEuropean,
+		Scripts:     []Script{Devanagari, Brahmi},
+		Regions:     []Region{Asia, India, Eurasia},
 		NativeNames: []string{"संस्कृतम्", "Saṃskṛtam"},
 		Variants: []Variant{
 			{Code: "cls", EnglishName: "Classical Sanskrit"},
@@ -997,7 +1029,11 @@ var (
 	Swahili = Language{
 		Codes:       []string{"sw", "swa"},
 		EnglishName: "Swahili",
+		Type:        Living,
 		Scope:       Macro,
+		Scripts:     []Script{LatinScript, ArabicScript},
+		Family:      NigerCongo,
+		Regions:     []Region{Africa},
 		NativeNames: []string{"Kiswahili", "كِسوَحِيلِ"},
 		Variants: []Variant{
 			{Code: "swc", EnglishName: "Congo Swahili"},
@@ -1105,7 +1141,11 @@ var (
 	Uzbek = Language{
 		Codes:       []string{"uz", "uzb"},
 		EnglishName: "Uzbek",
+		Type:        Living,
 		Scope:       Macro,
+		Scripts:     []Script{Cyrillic, LatinScript, ArabicScript},
+		Family:      Turkic,
+		Regions:     []Region{Asia, CentralAsia},
 		NativeNames: []string{"Ózbekça", "ўзбекча", "ئوزبېچه"},
 		Variants: []Variant{
 			{Code: "uzn", EnglishName: "Northern Uzbek"},
@@ -1161,6 +1201,7 @@ var (
 		Scope:       Macro,
 		Family:      IndoEuropean,
 		Scripts:     []Script{HebrewScript, LatinScript},
+		Regions:     []Region{Eurasia, Asia},
 		NativeNames: []string{"ייִדיש", "Yidiš"},
 		Variants: []Variant{
 			{Code: "ydd", EnglishName: "Eastern Yiddish"},
