@@ -620,6 +620,11 @@ const (
 	ZYJ Code = "zyj" // Youjiang Zhuang
 	ZYN Code = "zyn" // Yongnan Zhuang
 	ZZJ Code = "zzj" // Zuojiang Zhuang
+	AAE Code = "aae" // Arbëreshë Albanian
+	GRC Code = "grc" // Ancient Greek
+	YO  Code = "yo"  // Yoruba
+	YOR Code = "yor" // Yoruba
+	ZHA Code = "zha" // Zhuang
 )
 
 const (

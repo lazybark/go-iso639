@@ -9,7 +9,7 @@ type Region string
 
 // Language represents an ISO 639 language.
 type Language struct {
-	Codes       []string  // All ISO codes (ISO 639-1, ISO 639-2, ISO 639-3)
+	Codes       []Code    // All ISO codes (ISO 639-1, ISO 639-2, ISO 639-3)
 	EnglishName string    // English name of the primary language
 	Type        Type      // Type of the language (e.g. Individual, Macrolanguage, Ancient)
 	Scope       Scope     // Scope of the language (e.g. Living, Ancient)
@@ -21,7 +21,7 @@ type Language struct {
 }
 
 type Variant struct {
-	Code        string   // Unique ISO 639-3 code for the variant
+	Code        Code     // Unique ISO 639-3 code for the variant
 	EnglishName string   // English name of the variant
 	NativeNames []string // Native names of the variant
 }
@@ -29,14 +29,14 @@ type Variant struct {
 // ByCode fetches a language by its Alpha-1,2 or 3 code or by variant code.
 func ByCode(code string) (*Language, bool) {
 	for _, lang := range LanguageMap {
-		for _, code := range lang.Codes {
-			if code == code {
+		for _, langCode := range lang.Codes {
+			if langCode == Code(code) {
 				return &lang, true
 			}
 		}
 
 		for _, variant := range lang.Variants {
-			if variant.Code == code {
+			if variant.Code == Code(code) {
 				return &lang, true
 			}
 		}
