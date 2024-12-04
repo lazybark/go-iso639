@@ -1252,4 +1252,12 @@ var (
 		EnglishName: "Blissymbols",
 		Scope:       Individual,
 	}
+	Sumerian = Language{
+		Codes:       []Code{SUX},
+		EnglishName: "Sumerian",
+		Type:        Ancient,
+		Regions:     []Region{MiddleEast},
+		Family:      LanguageIsolate,
+		Scripts:     []Script{Cuneiform},
+	}
 )

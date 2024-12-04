@@ -625,6 +625,10 @@ const (
 	YOR Code = "yor" // Yoruba
 	ZHA Code = "zha" // Zhuang
 	LDI Code = "ldi" // Laari (Kongo)
+
+	// Ancient languages.
+
+	SUX Code = "sux" // Sumerian
 )
 
 const (
@@ -656,6 +660,7 @@ const (
 	Brahmi          Script = "Brahmi"
 	ChineseScript   Script = "Chinese"
 	Cyrillic        Script = "Cyrillic"
+	Cuneiform       Script = "Cuneiform"
 	Devanagari      Script = "Devanagari"
 	HebrewScript    Script = "Hebrew"
 	GeorgianScript  Script = "Georgian"
@@ -684,6 +689,7 @@ const (
 	Arawakan              Family = "Arawakan"
 	Turkic                Family = "Turkic"
 	Mongolic              Family = "Mongolic"
+	LanguageIsolate       Family = "Language isolate"
 )
 
 // LanguageMap is the list of language codes mapped to their model.
@@ -1308,4 +1314,8 @@ var LanguageMap = map[Code]Language{
 	YOR: Yoruba,
 	ZHA: Zhuang,
 	LDI: Kongo,
+
+	// Ancient languages.
+
+	SUX: Sumerian,
 }
