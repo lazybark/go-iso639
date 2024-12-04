@@ -470,7 +470,6 @@ const (
 	KPV Code = "kpv" // Komi-Zyrian
 	KNG Code = "kng" // Koongo
 	KWY Code = "kwy" // San Salvador Kongo
-	IDI Code = "ldi" // Laari (Kongo)
 	CKB Code = "ckb" // Central Kurdish
 	KMR Code = "kmr" // Northern Kurdish
 	SDH Code = "sdh" // Southern Kurdish
@@ -625,6 +624,7 @@ const (
 	YO  Code = "yo"  // Yoruba
 	YOR Code = "yor" // Yoruba
 	ZHA Code = "zha" // Zhuang
+	LDI Code = "ldi" // Laari (Kongo)
 )
 
 const (
@@ -1153,7 +1153,6 @@ var LanguageMap = map[Code]Language{
 	KPV: Komi,
 	KNG: Kongo,
 	KWY: Kongo,
-	IDI: Kongo,
 	CKB: Kurdish,
 	KMR: Kurdish,
 	SDH: Kurdish,
@@ -1302,4 +1301,10 @@ var LanguageMap = map[Code]Language{
 	ZYJ: Zhuang,
 	ZYN: Zhuang,
 	ZZJ: Zhuang,
+	AAE: Albanian,
+	GRC: AncientGreek,
+	YO:  Yoruba,
+	YOR: Yoruba,
+	ZHA: Zhuang,
+	LDI: Kongo,
 }
