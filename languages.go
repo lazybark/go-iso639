@@ -200,7 +200,10 @@ var (
 	Chinese = Language{
 		Codes:       []Code{ZH, ZHO, CHI},
 		EnglishName: "Chinese",
+		Type:        Living,
 		Scope:       Macro,
+		Scripts:     []Script{ChineseScript, LatinScript},
+		Regions:     []Region{Asia, Eurasia, Oceania},
 		NativeNames: []string{"中文", "Zhōngwén", "汉语", "漢語", "Hànyǔ"},
 		Variants: []Variant{
 			{Code: CDO, EnglishName: "Min Dong Chinese"},
