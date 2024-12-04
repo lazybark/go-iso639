@@ -11,8 +11,8 @@ type Region string
 type Language struct {
 	Codes       []Code    // All ISO codes (ISO 639-1, ISO 639-2, ISO 639-3)
 	EnglishName string    // English name of the primary language
-	Type        Type      // Type of the language (e.g. Individual, Macrolanguage, Ancient)
-	Scope       Scope     // Scope of the language (e.g. Living, Ancient)
+	Type        Type      // Type of the language (e.g. Living, Ancient)
+	Scope       Scope     // Scope of the language (e.g. Individual, Macrolanguage, Ancient)
 	Scripts     []Script  // Writing script of the language (e.g. Latin, Cyrillic)
 	Family      Family    // Language family (e.g. Indo-European, Sino-Tibetan)
 	Regions     []Region  // Region where the language is spoken (e.g. Europe, Africa)
