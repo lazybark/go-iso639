@@ -650,18 +650,19 @@ const (
 	China        Region = "China"
 	MiddleEast   Region = "Middle East"
 
-	LatinScript     Script = "Latin"
-	Cyrillic        Script = "Cyrillic"
-	GeorgianScript  Script = "Georgian"
-	HebrewScript    Script = "Hebrew"
 	AngloSaxonRunes Script = "Anglo-Saxon runes"
 	ArabicScript    Script = "Arabic"
-	Devanagari      Script = "Devanagari"
+	ArmenianScript  Script = "Armenian"
 	Brahmi          Script = "Brahmi"
+	ChineseScript   Script = "Chinese"
+	Cyrillic        Script = "Cyrillic"
+	Devanagari      Script = "Devanagari"
+	HebrewScript    Script = "Hebrew"
+	GeorgianScript  Script = "Georgian"
+	LatinScript     Script = "Latin"
+	MongolianScript Script = "Mongolian"
 	PersianScript   Script = ArabicScript // Will simplify search.
 	PashtoScript    Script = ArabicScript // Will simplify search.
-	MongolianScript Script = "Mongolian"
-	ArmenianScript  Script = "Armenian"
 
 	NorthwestCaucasian    Family = "Northwest Caucasian"
 	NigerCongo            Family = "Niger–Congo"
