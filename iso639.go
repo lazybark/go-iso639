@@ -27,50 +27,50 @@ type Variant struct {
 }
 
 // ByCode fetches a language by its Alpha-1,2 or 3 code or by variant code.
-func ByCode(code string) (*Language, bool) {
+func ByCode(code string) *Language {
 	for _, lang := range LanguageMap {
 		for _, langCode := range lang.Codes {
 			if langCode == Code(code) {
-				return &lang, true
+				return &lang
 			}
 		}
 
 		for _, variant := range lang.Variants {
 			if variant.Code == Code(code) {
-				return &lang, true
+				return &lang
 			}
 		}
 	}
 
-	return nil, false
+	return nil
 }
 
-func ByName(name string) (*Language, bool) {
+func ByName(name string) *Language {
 	for _, lang := range LanguageMap {
 		if lang.EnglishName == name {
-			return &lang, true
+			return &lang
 		}
 
 		for _, nativeName := range lang.NativeNames {
 			if nativeName == name {
-				return &lang, true
+				return &lang
 			}
 		}
 
 		for _, variant := range lang.Variants {
 			if variant.EnglishName == name {
-				return &lang, true
+				return &lang
 			}
 
 			for _, nativeName := range variant.NativeNames {
 				if nativeName == name {
-					return &lang, true
+					return &lang
 				}
 			}
 		}
 	}
 
-	return nil, false
+	return nil
 }
 
 func ByType(t Type) []Language {

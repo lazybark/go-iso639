@@ -15,7 +15,8 @@ func TestByCode(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		lang, found := ByCode(test.code)
+		lang := ByCode(test.code)
+		found := lang != nil
 		if found != test.found || (found && lang.EnglishName != test.expected) {
 			t.Errorf("ByCode(%s) = %v, %v; want %v, %v", test.code, lang, found, test.expected, test.found)
 		}
@@ -35,7 +36,8 @@ func TestByName(t *testing.T) {
 	}
 
 	for _, test := range tests {
-		lang, found := ByName(test.name)
+		lang := ByName(test.name)
+		found := lang != nil
 		if found != test.found || (found && lang.EnglishName != test.expected) {
 			t.Errorf("ByName(%s) = %v, %v; want %v, %v", test.name, lang, found, test.expected, test.found)
 		}
