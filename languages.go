@@ -6,7 +6,7 @@ var (
 		EnglishName: "Abkhazian",
 		Scope:       Individual,
 		Regions:     []Region{Eurasia, Georgia, Caucasus, Europe},
-		Scripts:     []Script{LatinScript, Cyrillic, GeorgianScript},
+		Scripts:     []Script{LatinScript, CyrillicScript, GeorgianScript},
 		Family:      NorthwestCaucasian,
 		Type:        Living,
 		NativeNames: []string{"Аҧсуа", "Apsua", "აფსუა", "Abkhaz"}}
@@ -114,6 +114,7 @@ var (
 		EnglishName: "Assamese",
 		Scope:       Individual,
 		Type:        Living,
+		Scripts:     []Script{LatinScript, BengaliAssamese},
 		NativeNames: []string{"অসমীয়া", "Ôxômiya"}}
 	Avaric = Language{
 		Codes:       []Code{AV, AVA},
@@ -173,6 +174,7 @@ var (
 		EnglishName: "Bengali",
 		Scope:       Individual,
 		Type:        Living,
+		Scripts:     []Script{BengaliAssamese},
 		NativeNames: []string{"বাংলা", "Bāŋlā"}}
 	Bislama = Language{
 		Codes:       []Code{BI, BIS},
@@ -674,7 +676,7 @@ var (
 		Type:        Living,
 		Scope:       Macro,
 		Family:      IndoEuropean,
-		Scripts:     []Script{LatinScript, ArabicScript, Cyrillic},
+		Scripts:     []Script{LatinScript, ArabicScript, CyrillicScript},
 		Regions:     []Region{Asia, Europe, Eurasia, Caucasus},
 		NativeNames: []string{"Kurdî", "کوردی"},
 		Variants: []Variant{
@@ -841,7 +843,7 @@ var (
 		Scope:       Macro,
 		Family:      Mongolic,
 		Regions:     []Region{Asia},
-		Scripts:     []Script{MongolianScript, Cyrillic},
+		Scripts:     []Script{MongolianScript, CyrillicScript},
 		NativeNames: []string{"ᠮᠣᠩᠭᠣᠯ ᠬᠡᠯᠡ", "Монгол хэл", "Mongol xel"},
 		Variants: []Variant{
 			{Code: KHK, EnglishName: "Halh Mongolian"},
@@ -1093,7 +1095,7 @@ var (
 		Type:        Ancient,
 		Scope:       Macro,
 		Family:      IndoEuropean,
-		Scripts:     []Script{Devanagari, Brahmi},
+		Scripts:     []Script{DevanagariScript, BrahmiScript},
 		Regions:     []Region{Asia, India, Eurasia},
 		NativeNames: []string{"संस्कृतम्", "Saṃskṛtam"},
 		Variants: []Variant{
@@ -1306,7 +1308,7 @@ var (
 		EnglishName: "Uzbek",
 		Type:        Living,
 		Scope:       Macro,
-		Scripts:     []Script{Cyrillic, LatinScript, ArabicScript},
+		Scripts:     []Script{CyrillicScript, LatinScript, ArabicScript},
 		Family:      Turkic,
 		Regions:     []Region{Asia, CentralAsia},
 		NativeNames: []string{"Ózbekça", "ўзбекча", "ئوزبېچه"},
@@ -1433,6 +1435,6 @@ var (
 		Type:        Ancient,
 		Regions:     []Region{MiddleEast},
 		Family:      LanguageIsolate,
-		Scripts:     []Script{Cuneiform},
+		Scripts:     []Script{CuneiformScript},
 	}
 )
