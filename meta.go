@@ -621,7 +621,6 @@ const (
 	ZYN Code = "zyn" // Yongnan Zhuang
 	ZZJ Code = "zzj" // Zuojiang Zhuang
 	AAE Code = "aae" // Arbëreshë Albanian
-	GRC Code = "grc" // Ancient Greek
 	YO  Code = "yo"  // Yoruba
 	YOR Code = "yor" // Yoruba
 	ZHA Code = "zha" // Zhuang
@@ -629,6 +628,7 @@ const (
 
 	// Ancient languages.
 
+	GRC Code = "grc" // Ancient Greek
 	SUX Code = "sux" // Sumerian
 )
 
@@ -656,45 +656,60 @@ const (
 	SouthAfrica  Region = "South Africa"
 	SouthAmerica Region = "South America"
 
-	AngloSaxonRunes   Script = "Anglo-Saxon runes"  // https://en.wikipedia.org/wiki/Anglo-Saxon_runes
-	ArabicScript      Script = "Arabic"             // https://en.wikipedia.org/wiki/Arabic_script
-	ArmenianScript    Script = "Armenian"           // https://en.wikipedia.org/wiki/Armenian_alphabet
-	BrahmiScript      Script = "Brahmi"             // https://en.wikipedia.org/wiki/Brahmi_script
-	BengaliAssamese   Script = "Bengali–Assamese"   // https://en.wikipedia.org/wiki/Bengali%E2%80%93Assamese_script
-	BurmeseScript     Script = "Burmese"            // https://en.wikipedia.org/wiki/Mon%E2%80%93Burmese_script
-	CanadianSyllabics Script = "Canadian Syllabics" // https://en.wikipedia.org/wiki/Canadian_Aboriginal_syllabics
-	ChakmaScript      Script = "Chakma"             // https://en.wikipedia.org/wiki/Chakma_script
-	ChineseScript     Script = "Chinese"            // https://en.wikipedia.org/wiki/Chinese_characters
-	CyrillicScript    Script = "Cyrillic"           // https://en.wikipedia.org/wiki/Cyrillic_script
-	CuneiformScript   Script = "Cuneiform"          // https://en.wikipedia.org/wiki/Cuneiform
-	DevanagariScript  Script = "Devanagari"         // https://en.wikipedia.org/wiki/Devanagari
-	GeorgianScript    Script = "Georgian"           // https://en.wikipedia.org/wiki/Georgian_scripts
-	GeezScript        Script = "Geʽez"              // https://en.wikipedia.org/wiki/Ge%CA%BDez_script
-	GreekScript       Script = "Greek"              // https://en.wikipedia.org/wiki/Greek_alphabet
-	GujaratiScript    Script = "Gujarati"           // https://en.wikipedia.org/wiki/Gujarati_script
-	HangulScript      Script = "Hangul"             // https://en.wikipedia.org/wiki/Hangul
-	HebrewScript      Script = "Hebrew"             // https://en.wikipedia.org/wiki/Hebrew_alphabet
-	HiraganaScript    Script = "Hiragana"           // https://en.wikipedia.org/wiki/Hiragana
-	GurmukhiScript    Script = "Gurmukhi"           // https://en.wikipedia.org/wiki/Gurmukhi
-	KanaScript        Script = "Kana"               // https://en.wikipedia.org/wiki/Kana
-	KannadaScript     Script = "Kannada"            // https://en.wikipedia.org/wiki/Kannada_script
-	KatakanaScript    Script = "Katakana"           // https://en.wikipedia.org/wiki/Katakana
-	KhmerScript       Script = "Khmer"              // https://en.wikipedia.org/wiki/Khmer_script
-	LaoScript         Script = "Lao"                // https://en.wikipedia.org/wiki/Lao_script
-	LatinScript       Script = "Latin"              // https://en.wikipedia.org/wiki/Latin_script
-	MalayalamScript   Script = "Malayalam"          // https://en.wikipedia.org/wiki/Malayalam_script
-	MeiteiScript      Script = "Meitei"             // https://en.wikipedia.org/wiki/Meitei_script
-	MongolianScript   Script = "Mongolian"          // https://en.wikipedia.org/wiki/Mongolian_script
-	OdiaScript        Script = "Odia"               // https://en.wikipedia.org/wiki/Odia_script
-	OlChikiScript     Script = "Ol Chiki"           // https://en.wikipedia.org/wiki/Ol_Chiki_script
-	PersianScript     Script = ArabicScript         // Persian uses Arabic script
-	PashtoScript      Script = ArabicScript         // Pashto uses Arabic script
-	TamilScript       Script = "Tamil"              // https://en.wikipedia.org/wiki/Tamil_script
-	TeluguScript      Script = "Telugu"             // https://en.wikipedia.org/wiki/Telugu_script
-	ThaiScript        Script = "Thai"               // https://en.wikipedia.org/wiki/Thai_script
-	ThaanaScript      Script = "Thaana"             // https://en.wikipedia.org/wiki/Thaana
-	TibetanScript     Script = "Tibetan"            // https://en.wikipedia.org/wiki/Tibetan_script
-	SinhalaScript     Script = "Sinhala"            // https://en.wikipedia.org/wiki/Sinhala_script
+	AngloSaxonRunes       Script = "Anglo-Saxon runes"  // https://en.wikipedia.org/wiki/Anglo-Saxon_runes
+	ArabicScript          Script = "Arabic"             // https://en.wikipedia.org/wiki/Arabic_script
+	ArmenianScript        Script = "Armenian"           // https://en.wikipedia.org/wiki/Armenian_alphabet
+	BrahmiScript          Script = "Brahmi"             // https://en.wikipedia.org/wiki/Brahmi_script
+	BengaliAssameseScript Script = "Bengali–Assamese"   // https://en.wikipedia.org/wiki/Bengali%E2%80%93Assamese_script
+	BurmeseScript         Script = "Burmese"            // https://en.wikipedia.org/wiki/Mon%E2%80%93Burmese_script
+	BopomofoScript        Script = "Bopomofo"           // https://en.wikipedia.org/wiki/Bopomofo
+	BrailleScript         Script = "Braille"            // https://en.wikipedia.org/wiki/Braille
+	CanadianSyllabics     Script = "Canadian Syllabics" // https://en.wikipedia.org/wiki/Canadian_Aboriginal_syllabics
+	ChakmaScript          Script = "Chakma"             // https://en.wikipedia.org/wiki/Chakma_script
+	CherokeeScript        Script = "Cherokee"           // https://en.wikipedia.org/wiki/Cherokee_syllabary
+	ChineseScript         Script = "Chinese"            // https://en.wikipedia.org/wiki/Chinese_characters
+	CyrillicScript        Script = "Cyrillic"           // https://en.wikipedia.org/wiki/Cyrillic_script
+	CypriotScript         Script = "Cypriot"            // https://en.wikipedia.org/wiki/Cypriot_syllabary
+	CuneiformScript       Script = "Cuneiform"          // https://en.wikipedia.org/wiki/Cuneiform
+	DevanagariScript      Script = "Devanagari"         // https://en.wikipedia.org/wiki/Devanagari
+	DeseretScript         Script = "Deseret"            // https://en.wikipedia.org/wiki/Deseret_alphabet
+	GeorgianScript        Script = "Georgian"           // https://en.wikipedia.org/wiki/Georgian_scripts
+	GeezScript            Script = "Geʽez"              // https://en.wikipedia.org/wiki/Ge%CA%BDez_script
+	GreekScript           Script = "Greek"              // https://en.wikipedia.org/wiki/Greek_alphabet
+	GujaratiScript        Script = "Gujarati"           // https://en.wikipedia.org/wiki/Gujarati_script
+	GothicScript          Script = "Gothic"             // https://en.wikipedia.org/wiki/Gothic_alphabet
+	HangulScript          Script = "Hangul"             // https://en.wikipedia.org/wiki/Hangul
+	HebrewScript          Script = "Hebrew"             // https://en.wikipedia.org/wiki/Hebrew_alphabet
+	HiraganaScript        Script = "Hiragana"           // https://en.wikipedia.org/wiki/Hiragana
+	GurmukhiScript        Script = "Gurmukhi"           // https://en.wikipedia.org/wiki/Gurmukhi
+	KanbunScript          Script = "Kanbun"             // https://en.wikipedia.org/wiki/Kanbun
+	KanaScript            Script = "Kana"               // https://en.wikipedia.org/wiki/Kana
+	KannadaScript         Script = "Kannada"            // https://en.wikipedia.org/wiki/Kannada_script
+	KatakanaScript        Script = "Katakana"           // https://en.wikipedia.org/wiki/Katakana
+	KhmerScript           Script = "Khmer"              // https://en.wikipedia.org/wiki/Khmer_script
+	LaoScript             Script = "Lao"                // https://en.wikipedia.org/wiki/Lao_script
+	LatinScript           Script = "Latin"              // https://en.wikipedia.org/wiki/Latin_script
+	LimbuScript           Script = "Limbu"              // https://en.wikipedia.org/wiki/Limbu_script
+	MalayalamScript       Script = "Malayalam"          // https://en.wikipedia.org/wiki/Malayalam_script
+	MeiteiScript          Script = "Meitei"             // https://en.wikipedia.org/wiki/Meitei_script
+	MongolianScript       Script = "Mongolian"          // https://en.wikipedia.org/wiki/Mongolian_script
+	UgariticScript        Script = "Ugaritic"           // https://en.wikipedia.org/wiki/Ugaritic_alphabet
+	OdiaScript            Script = "Odia"               // https://en.wikipedia.org/wiki/Odia_script
+	OghamScript           Script = "Ogham"              // https://en.wikipedia.org/wiki/Ogham
+	OlChikiScript         Script = "Ol Chiki"           // https://en.wikipedia.org/wiki/Ol_Chiki_script
+	OldItalicScript       Script = "Old Italic"         // https://en.wikipedia.org/wiki/Old_Italic_script
+	OsmanyaScript         Script = "Osmanya"            // https://en.wikipedia.org/wiki/Osmanya_alphabet
+	PersianScript         Script = ArabicScript         // Persian uses Arabic script
+	PashtoScript          Script = ArabicScript         // Pashto uses Arabic script
+	SinhalaScript         Script = "Sinhala"            // https://en.wikipedia.org/wiki/Sinhala_script
+	ShavianScript         Script = "Shavian"            // https://en.wikipedia.org/wiki/Shavian_alphabet
+	SyriacScript          Script = "Syriac"             // https://en.wikipedia.org/wiki/Syriac_alphabet
+	TaiLeScript           Script = "Tai Le"             // https://en.wikipedia.org/wiki/Tai_Le_script
+	TamilScript           Script = "Tamil"              // https://en.wikipedia.org/wiki/Tamil_script
+	TeluguScript          Script = "Telugu"             // https://en.wikipedia.org/wiki/Telugu_script
+	ThaiScript            Script = "Thai"               // https://en.wikipedia.org/wiki/Thai_script
+	ThaanaScript          Script = "Thaana"             // https://en.wikipedia.org/wiki/Thaana
+	TibetanScript         Script = "Tibetan"            // https://en.wikipedia.org/wiki/Tibetan_script
 
 	NorthwestCaucasian    Family = "Northwest Caucasian"      // https://en.wikipedia.org/wiki/Northwest_Caucasian_languages
 	NigerCongo            Family = "Niger–Congo"              // https://en.wikipedia.org/wiki/Niger%E2%80%93Congo_languages
@@ -1163,7 +1178,7 @@ var LanguageMap = map[Code]Language{
 	VRO: Estonian,
 	EKK: Estonian,
 	FFM: Fulah,
-	FUB: (Fulah),
+	FUB: Fulah,
 	FUC: Fulah,
 	FUE: Fulah,
 	FUF: Fulah,
@@ -1336,7 +1351,6 @@ var LanguageMap = map[Code]Language{
 	ZYN: Zhuang,
 	ZZJ: Zhuang,
 	AAE: Albanian,
-	GRC: AncientGreek,
 	YO:  Yoruba,
 	YOR: Yoruba,
 	ZHA: Zhuang,
@@ -1344,5 +1358,6 @@ var LanguageMap = map[Code]Language{
 
 	// Ancient languages.
 
+	GRC: AncientGreek,
 	SUX: Sumerian,
 }

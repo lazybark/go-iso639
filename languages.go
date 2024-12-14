@@ -114,7 +114,7 @@ var (
 		EnglishName: "Assamese",
 		Scope:       Individual,
 		Type:        Living,
-		Scripts:     []Script{LatinScript, BengaliAssamese},
+		Scripts:     []Script{LatinScript, BengaliAssameseScript},
 		NativeNames: []string{"অসমীয়া", "Ôxômiya"}}
 	Avaric = Language{
 		Codes:       []Code{AV, AVA},
@@ -174,7 +174,7 @@ var (
 		EnglishName: "Bengali",
 		Scope:       Individual,
 		Type:        Living,
-		Scripts:     []Script{BengaliAssamese},
+		Scripts:     []Script{BengaliAssameseScript},
 		NativeNames: []string{"বাংলা", "Bāŋlā"}}
 	Bislama = Language{
 		Codes:       []Code{BI, BIS},
