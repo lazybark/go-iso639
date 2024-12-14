@@ -23,12 +23,18 @@ var (
 		Codes:       []Code{AF, AFR},
 		EnglishName: "Afrikaans",
 		Scope:       Individual,
+		Regions:     []Region{Africa, SouthAfrica},
+		Scripts:     []Script{LatinScript, ArabicScript},
+		Family:      IndoEuropean,
 		Type:        Living,
 	}
 	Akan = Language{
 		Codes:       []Code{AK, AKA},
 		EnglishName: "Akan",
 		Scope:       Macro,
+		Regions:     []Region{Africa},
+		Family:      NigerCongo,
+		Scripts:     []Script{LatinScript},
 		Type:        Living,
 		NativeNames: []string{"Ákán"},
 		Variants: []Variant{
