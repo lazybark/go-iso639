@@ -695,27 +695,27 @@ const (
 	TibetanScript     Script = "Tibetan"            // https://en.wikipedia.org/wiki/Tibetan_script
 	SinhalaScript     Script = "Sinhala"            // https://en.wikipedia.org/wiki/Sinhala_script
 
-	NorthwestCaucasian    Family = "Northwest Caucasian"
-	NigerCongo            Family = "Niger–Congo"
-	Austronesian          Family = "Austronesian"
-	TransNewGuinea        Family = "Trans–New Guinea"
-	SinoTibetan           Family = "Sino-Tibetan"
-	IndoEuropean          Family = "Indo-European"
-	Australian            Family = "Australian"
-	Afroasiatic           Family = "Afroasiatic"
-	NiloSaharan           Family = "Nilo-Saharan"
-	Otomanguean           Family = "Otomanguean"
-	Austroasiatic         Family = "Austroasiatic"
-	KraDai                Family = "Kra-Dai"
-	Dravidian             Family = "Dravidian"
-	AtlanticCongo         Family = "Atlantic–Congo"
-	NuclearTransNewGuinea Family = "Nuclear Trans–New Guinea"
-	PamaNyungan           Family = "Pama–Nyungan"
-	TaiKadai              Family = "Tai–Kadai"
-	Arawakan              Family = "Arawakan"
-	Turkic                Family = "Turkic"
-	Mongolic              Family = "Mongolic"
-	LanguageIsolate       Family = "Language isolate"
+	NorthwestCaucasian    Family = "Northwest Caucasian"      // https://en.wikipedia.org/wiki/Northwest_Caucasian_languages
+	NigerCongo            Family = "Niger–Congo"              // https://en.wikipedia.org/wiki/Niger%E2%80%93Congo_languages
+	Austronesian          Family = "Austronesian"             // https://en.wikipedia.org/wiki/Austronesian_languages
+	TransNewGuinea        Family = "Trans–New Guinea"         // https://en.wikipedia.org/wiki/Trans%E2%80%93New_Guinea_languages
+	SinoTibetan           Family = "Sino-Tibetan"             // https://en.wikipedia.org/wiki/Sino-Tibetan_languages
+	IndoEuropean          Family = "Indo-European"            // https://en.wikipedia.org/wiki/Indo-European_languages
+	Australian            Family = "Australian"               // https://en.wikipedia.org/wiki/Australian_languages
+	Afroasiatic           Family = "Afroasiatic"              // https://en.wikipedia.org/wiki/Afroasiatic_languages
+	NiloSaharan           Family = "Nilo-Saharan"             // https://en.wikipedia.org/wiki/Nilo-Saharan_languages
+	Otomanguean           Family = "Otomanguean"              // https://en.wikipedia.org/wiki/Otomanguean_languages
+	Austroasiatic         Family = "Austroasiatic"            // https://en.wikipedia.org/wiki/Austroasiatic_languages
+	KraDai                Family = "Kra-Dai"                  // https://en.wikipedia.org/wiki/Kra%E2%80%93Dai_languages
+	Dravidian             Family = "Dravidian"                // https://en.wikipedia.org/wiki/Dravidian_languages
+	AtlanticCongo         Family = "Atlantic–Congo"           // https://en.wikipedia.org/wiki/Atlantic%E2%80%93Congo_languages
+	NuclearTransNewGuinea Family = "Nuclear Trans–New Guinea" // https://en.wikipedia.org/wiki/Nuclear_Trans%E2%80%93New_Guinea_languages
+	PamaNyungan           Family = "Pama–Nyungan"             // https://en.wikipedia.org/wiki/Pama%E2%80%93Nyungan_languages
+	TaiKadai              Family = "Tai–Kadai"                // https://en.wikipedia.org/wiki/Tai%E2%80%93Kadai_languages
+	Arawakan              Family = "Arawakan"                 // https://en.wikipedia.org/wiki/Arawakan_languages
+	Turkic                Family = "Turkic"                   // https://en.wikipedia.org/wiki/Turkic_languages
+	Mongolic              Family = "Mongolic"                 // https://en.wikipedia.org/wiki/Mongolic_languages
+	LanguageIsolate       Family = "Language isolate"         // https://en.wikipedia.org/wiki/Language_isolate
 )
 
 // LanguageMap is the list of language codes mapped to their model.
