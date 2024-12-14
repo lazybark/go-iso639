@@ -61,6 +61,7 @@ const (
 	CHA Code = "cha" // Chamorro
 	CE  Code = "ce"  // Chechen
 	CHE Code = "che" // Chechen
+	CHR Code = "chr" // Cherokee
 	NY  Code = "ny"  // Chichewa
 	NYA Code = "nya" // Chichewa
 	ZH  Code = "zh"  // Chinese

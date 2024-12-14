@@ -223,6 +223,13 @@ var (
 		Scope:       Individual,
 		Type:        Living,
 		NativeNames: []string{"Нохчийн мотт", "Noxçiyn mott", "Chechnyan", "Chechnian"}}
+	Cherokee = Language{
+		Codes:       []Code{CHR},
+		EnglishName: "Cherokee",
+		Scope:       Individual,
+		Type:        Living,
+		Scripts:     []Script{CherokeeScript, LatinScript},
+		NativeNames: []string{"ᏣᎳᎩ", "Tsalagi Gawonihisdi"}}
 	Chichewa = Language{
 		Codes:       []Code{NY, NYA},
 		EnglishName: "Chichewa",
