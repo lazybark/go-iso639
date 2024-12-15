@@ -61,6 +61,7 @@ const (
 	CHA Code = "cha" // Chamorro
 	CE  Code = "ce"  // Chechen
 	CHE Code = "che" // Chechen
+	CHR Code = "chr" // Cherokee
 	NY  Code = "ny"  // Chichewa
 	NYA Code = "nya" // Chichewa
 	ZH  Code = "zh"  // Chinese
@@ -620,7 +621,6 @@ const (
 	ZYN Code = "zyn" // Yongnan Zhuang
 	ZZJ Code = "zzj" // Zuojiang Zhuang
 	AAE Code = "aae" // Arbëreshë Albanian
-	GRC Code = "grc" // Ancient Greek
 	YO  Code = "yo"  // Yoruba
 	YOR Code = "yor" // Yoruba
 	ZHA Code = "zha" // Zhuang
@@ -628,6 +628,7 @@ const (
 
 	// Ancient languages.
 
+	GRC Code = "grc" // Ancient Greek
 	SUX Code = "sux" // Sumerian
 )
 
@@ -640,56 +641,97 @@ const (
 	Ancient     Type = "Ancient"
 
 	Africa       Region = "Africa"
-	Australia    Region = "Australia"
-	Europe       Region = "Europe"
-	Eurasia      Region = "Eurasia"
 	Asia         Region = "Asia"
-	CentralAsia  Region = "Central Asia"
-	NorthAmerica Region = "North America"
-	SouthAmerica Region = "South America"
-	Oceania      Region = "Oceania"
+	Australia    Region = "Australia"
 	Caucasus     Region = "Caucasus"
+	CentralAsia  Region = "Central Asia"
+	China        Region = "China"
+	Eurasia      Region = "Eurasia"
+	Europe       Region = "Europe"
 	Georgia      Region = "Georgia"
 	India        Region = "India"
-	China        Region = "China"
 	MiddleEast   Region = "Middle East"
+	NorthAmerica Region = "North America"
+	Oceania      Region = "Oceania"
+	SouthAfrica  Region = "South Africa"
+	SouthAmerica Region = "South America"
 
-	AngloSaxonRunes Script = "Anglo-Saxon runes"
-	ArabicScript    Script = "Arabic"
-	ArmenianScript  Script = "Armenian"
-	Brahmi          Script = "Brahmi"
-	ChineseScript   Script = "Chinese"
-	Cyrillic        Script = "Cyrillic"
-	Cuneiform       Script = "Cuneiform"
-	Devanagari      Script = "Devanagari"
-	HebrewScript    Script = "Hebrew"
-	GeorgianScript  Script = "Georgian"
-	LatinScript     Script = "Latin"
-	MongolianScript Script = "Mongolian"
-	PersianScript   Script = ArabicScript // Will simplify search.
-	PashtoScript    Script = ArabicScript // Will simplify search.
+	AngloSaxonRunes       Script = "Anglo-Saxon runes"  // https://en.wikipedia.org/wiki/Anglo-Saxon_runes
+	ArabicScript          Script = "Arabic"             // https://en.wikipedia.org/wiki/Arabic_script
+	ArmenianScript        Script = "Armenian"           // https://en.wikipedia.org/wiki/Armenian_alphabet
+	BrahmiScript          Script = "Brahmi"             // https://en.wikipedia.org/wiki/Brahmi_script
+	BengaliAssameseScript Script = "Bengali–Assamese"   // https://en.wikipedia.org/wiki/Bengali%E2%80%93Assamese_script
+	BurmeseScript         Script = "Burmese"            // https://en.wikipedia.org/wiki/Mon%E2%80%93Burmese_script
+	BopomofoScript        Script = "Bopomofo"           // https://en.wikipedia.org/wiki/Bopomofo
+	BrailleScript         Script = "Braille"            // https://en.wikipedia.org/wiki/Braille
+	CanadianSyllabics     Script = "Canadian Syllabics" // https://en.wikipedia.org/wiki/Canadian_Aboriginal_syllabics
+	ChakmaScript          Script = "Chakma"             // https://en.wikipedia.org/wiki/Chakma_script
+	CherokeeScript        Script = "Cherokee"           // https://en.wikipedia.org/wiki/Cherokee_syllabary
+	ChineseScript         Script = "Chinese"            // https://en.wikipedia.org/wiki/Chinese_characters
+	CyrillicScript        Script = "Cyrillic"           // https://en.wikipedia.org/wiki/Cyrillic_script
+	CypriotScript         Script = "Cypriot"            // https://en.wikipedia.org/wiki/Cypriot_syllabary
+	CuneiformScript       Script = "Cuneiform"          // https://en.wikipedia.org/wiki/Cuneiform
+	DevanagariScript      Script = "Devanagari"         // https://en.wikipedia.org/wiki/Devanagari
+	DeseretScript         Script = "Deseret"            // https://en.wikipedia.org/wiki/Deseret_alphabet
+	GeorgianScript        Script = "Georgian"           // https://en.wikipedia.org/wiki/Georgian_scripts
+	GeezScript            Script = "Geʽez"              // https://en.wikipedia.org/wiki/Ge%CA%BDez_script
+	GreekScript           Script = "Greek"              // https://en.wikipedia.org/wiki/Greek_alphabet
+	GujaratiScript        Script = "Gujarati"           // https://en.wikipedia.org/wiki/Gujarati_script
+	GothicScript          Script = "Gothic"             // https://en.wikipedia.org/wiki/Gothic_alphabet
+	HangulScript          Script = "Hangul"             // https://en.wikipedia.org/wiki/Hangul
+	HebrewScript          Script = "Hebrew"             // https://en.wikipedia.org/wiki/Hebrew_alphabet
+	HiraganaScript        Script = "Hiragana"           // https://en.wikipedia.org/wiki/Hiragana
+	GurmukhiScript        Script = "Gurmukhi"           // https://en.wikipedia.org/wiki/Gurmukhi
+	KanbunScript          Script = "Kanbun"             // https://en.wikipedia.org/wiki/Kanbun
+	KanaScript            Script = "Kana"               // https://en.wikipedia.org/wiki/Kana
+	KannadaScript         Script = "Kannada"            // https://en.wikipedia.org/wiki/Kannada_script
+	KatakanaScript        Script = "Katakana"           // https://en.wikipedia.org/wiki/Katakana
+	KhmerScript           Script = "Khmer"              // https://en.wikipedia.org/wiki/Khmer_script
+	LaoScript             Script = "Lao"                // https://en.wikipedia.org/wiki/Lao_script
+	LatinScript           Script = "Latin"              // https://en.wikipedia.org/wiki/Latin_script
+	LimbuScript           Script = "Limbu"              // https://en.wikipedia.org/wiki/Limbu_script
+	MalayalamScript       Script = "Malayalam"          // https://en.wikipedia.org/wiki/Malayalam_script
+	MeiteiScript          Script = "Meitei"             // https://en.wikipedia.org/wiki/Meitei_script
+	MongolianScript       Script = "Mongolian"          // https://en.wikipedia.org/wiki/Mongolian_script
+	UgariticScript        Script = "Ugaritic"           // https://en.wikipedia.org/wiki/Ugaritic_alphabet
+	OdiaScript            Script = "Odia"               // https://en.wikipedia.org/wiki/Odia_script
+	OghamScript           Script = "Ogham"              // https://en.wikipedia.org/wiki/Ogham
+	OlChikiScript         Script = "Ol Chiki"           // https://en.wikipedia.org/wiki/Ol_Chiki_script
+	OldItalicScript       Script = "Old Italic"         // https://en.wikipedia.org/wiki/Old_Italic_script
+	OsmanyaScript         Script = "Osmanya"            // https://en.wikipedia.org/wiki/Osmanya_alphabet
+	PersianScript         Script = ArabicScript         // Persian uses Arabic script
+	PashtoScript          Script = ArabicScript         // Pashto uses Arabic script
+	SinhalaScript         Script = "Sinhala"            // https://en.wikipedia.org/wiki/Sinhala_script
+	ShavianScript         Script = "Shavian"            // https://en.wikipedia.org/wiki/Shavian_alphabet
+	SyriacScript          Script = "Syriac"             // https://en.wikipedia.org/wiki/Syriac_alphabet
+	TaiLeScript           Script = "Tai Le"             // https://en.wikipedia.org/wiki/Tai_Le_script
+	TamilScript           Script = "Tamil"              // https://en.wikipedia.org/wiki/Tamil_script
+	TeluguScript          Script = "Telugu"             // https://en.wikipedia.org/wiki/Telugu_script
+	ThaiScript            Script = "Thai"               // https://en.wikipedia.org/wiki/Thai_script
+	ThaanaScript          Script = "Thaana"             // https://en.wikipedia.org/wiki/Thaana
+	TibetanScript         Script = "Tibetan"            // https://en.wikipedia.org/wiki/Tibetan_script
 
-	NorthwestCaucasian    Family = "Northwest Caucasian"
-	NigerCongo            Family = "Niger–Congo"
-	Austronesian          Family = "Austronesian"
-	TransNewGuinea        Family = "Trans–New Guinea"
-	SinoTibetan           Family = "Sino-Tibetan"
-	IndoEuropean          Family = "Indo-European"
-	Australian            Family = "Australian"
-	Afroasiatic           Family = "Afroasiatic"
-	NiloSaharan           Family = "Nilo-Saharan"
-	Otomanguean           Family = "Otomanguean"
-	Austroasiatic         Family = "Austroasiatic"
-	KraDai                Family = "Kra-Dai"
-	Dravidian             Family = "Dravidian"
-	AtlanticCongo         Family = "Atlantic–Congo"
-	NuclearTransNewGuinea Family = "Nuclear Trans–New Guinea"
-	PamaNyungan           Family = "Pama–Nyungan"
-	TaiKadai              Family = "Tai–Kadai"
-	Arawakan              Family = "Arawakan"
-	Turkic                Family = "Turkic"
-	Mongolic              Family = "Mongolic"
-	LanguageIsolate       Family = "Language isolate"
+	NorthwestCaucasian    Family = "Northwest Caucasian"      // https://en.wikipedia.org/wiki/Northwest_Caucasian_languages
+	NigerCongo            Family = "Niger–Congo"              // https://en.wikipedia.org/wiki/Niger%E2%80%93Congo_languages
+	Austronesian          Family = "Austronesian"             // https://en.wikipedia.org/wiki/Austronesian_languages
+	TransNewGuinea        Family = "Trans–New Guinea"         // https://en.wikipedia.org/wiki/Trans%E2%80%93New_Guinea_languages
+	SinoTibetan           Family = "Sino-Tibetan"             // https://en.wikipedia.org/wiki/Sino-Tibetan_languages
+	IndoEuropean          Family = "Indo-European"            // https://en.wikipedia.org/wiki/Indo-European_languages
+	Australian            Family = "Australian"               // https://en.wikipedia.org/wiki/Australian_languages
+	Afroasiatic           Family = "Afroasiatic"              // https://en.wikipedia.org/wiki/Afroasiatic_languages
+	NiloSaharan           Family = "Nilo-Saharan"             // https://en.wikipedia.org/wiki/Nilo-Saharan_languages
+	Otomanguean           Family = "Otomanguean"              // https://en.wikipedia.org/wiki/Otomanguean_languages
+	Austroasiatic         Family = "Austroasiatic"            // https://en.wikipedia.org/wiki/Austroasiatic_languages
+	KraDai                Family = "Kra-Dai"                  // https://en.wikipedia.org/wiki/Kra%E2%80%93Dai_languages
+	Dravidian             Family = "Dravidian"                // https://en.wikipedia.org/wiki/Dravidian_languages
+	AtlanticCongo         Family = "Atlantic–Congo"           // https://en.wikipedia.org/wiki/Atlantic%E2%80%93Congo_languages
+	NuclearTransNewGuinea Family = "Nuclear Trans–New Guinea" // https://en.wikipedia.org/wiki/Nuclear_Trans%E2%80%93New_Guinea_languages
+	PamaNyungan           Family = "Pama–Nyungan"             // https://en.wikipedia.org/wiki/Pama%E2%80%93Nyungan_languages
+	TaiKadai              Family = "Tai–Kadai"                // https://en.wikipedia.org/wiki/Tai%E2%80%93Kadai_languages
+	Arawakan              Family = "Arawakan"                 // https://en.wikipedia.org/wiki/Arawakan_languages
+	Turkic                Family = "Turkic"                   // https://en.wikipedia.org/wiki/Turkic_languages
+	Mongolic              Family = "Mongolic"                 // https://en.wikipedia.org/wiki/Mongolic_languages
+	LanguageIsolate       Family = "Language isolate"         // https://en.wikipedia.org/wiki/Language_isolate
 )
 
 // LanguageMap is the list of language codes mapped to their model.
@@ -1136,7 +1178,7 @@ var LanguageMap = map[Code]Language{
 	VRO: Estonian,
 	EKK: Estonian,
 	FFM: Fulah,
-	FUB: (Fulah),
+	FUB: Fulah,
 	FUC: Fulah,
 	FUE: Fulah,
 	FUF: Fulah,
@@ -1309,7 +1351,6 @@ var LanguageMap = map[Code]Language{
 	ZYN: Zhuang,
 	ZZJ: Zhuang,
 	AAE: Albanian,
-	GRC: AncientGreek,
 	YO:  Yoruba,
 	YOR: Yoruba,
 	ZHA: Zhuang,
@@ -1317,5 +1358,6 @@ var LanguageMap = map[Code]Language{
 
 	// Ancient languages.
 
+	GRC: AncientGreek,
 	SUX: Sumerian,
 }
