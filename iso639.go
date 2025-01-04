@@ -45,6 +45,7 @@ func ByCode(code string) *Language {
 	return nil
 }
 
+// ByName fetches a language by its English or native name or by variant name.
 func ByName(name string) *Language {
 	for _, lang := range LanguageMap {
 		if lang.EnglishName == name {
@@ -73,6 +74,7 @@ func ByName(name string) *Language {
 	return nil
 }
 
+// ByType fetches all languages that have a specific type.
 func ByType(t Type) []Language {
 	langs := make([]Language, 0)
 
@@ -85,6 +87,7 @@ func ByType(t Type) []Language {
 	return langs
 }
 
+// ByScope fetches all languages that have a specific scope.
 func ByScope(scope Scope) []Language {
 	langs := make([]Language, 0)
 
@@ -97,6 +100,7 @@ func ByScope(scope Scope) []Language {
 	return langs
 }
 
+// ByFamily fetches all languages that belong to a specific family.
 func ByFamily(family string) []Language {
 	langs := make([]Language, 0)
 
@@ -109,6 +113,7 @@ func ByFamily(family string) []Language {
 	return langs
 }
 
+// ByScript fetches all languages that use a specific script.
 func ByScript(script string) []Language {
 	langs := make([]Language, 0)
 
@@ -124,6 +129,7 @@ func ByScript(script string) []Language {
 	return langs
 }
 
+// ByRegion fetches all languages spoken in a specific region.
 func ByRegion(region string) []Language {
 	langs := make([]Language, 0)
 
