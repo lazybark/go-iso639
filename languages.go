@@ -967,20 +967,16 @@ var (
 		Type:        Living,
 		Family:      NaDene,
 		NativeNames: []string{"Navaho", "Diné bizaad", "Naabeehó bizaad"}}
-	NorthNdebele = Language{
+	Ndebele = Language{
 		Codes:       []Code{ND, NDE},
 		EnglishName: "North Ndebele",
 		Scope:       Individual,
 		Type:        Living,
 		Family:      NigerCongo,
-		NativeNames: []string{"isiNdebele"}}
-	SouthNdebele = Language{
-		Codes:       []Code{NR, NBL},
-		EnglishName: "South Ndebele",
-		Scope:       Individual,
-		Type:        Living,
-		Family:      NigerCongo,
-		NativeNames: []string{"isiNdebele"}}
+		NativeNames: []string{"isiNdebele", "siNdebele", "Sumayela Ndebele"},
+		Variants: []Variant{
+			{Code: NR, EnglishName: "South Ndebele"},
+			{Code: NBL, EnglishName: "South Ndebele"}}}
 	Ndonga = Language{
 		Codes:       []Code{NG, NDO},
 		EnglishName: "Ndonga",
