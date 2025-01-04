@@ -106,7 +106,7 @@ var (
 	Slovenčina       = Slovak
 	Slovenščina      = Slovenian
 	Soomaali         = Somali
-	Sesotho          = SouthernSotho
+	Sesotho          = Sotho
 	Castilian        = Spanish
 	Español          = Spanish
 	Castellano       = Spanish

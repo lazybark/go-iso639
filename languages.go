@@ -1286,12 +1286,13 @@ var (
 		Type:        Living,
 		Family:      AfroAsiatic,
 		NativeNames: []string{"Soomaali", "𐒈𐒝𐒑𐒛𐒐𐒘", "سٝومالِ"}}
-	SouthernSotho = Language{
+	Sotho = Language{
 		Codes:       []Code{ST, SOT},
-		EnglishName: "Southern Sotho",
+		EnglishName: "Sotho",
 		Scope:       Individual,
 		Type:        Living,
 		Family:      NigerCongo,
+		NativeNames: []string{"Sesotho", "Southern Sotho"}}
 	Spanish = Language{
 		Codes:       []Code{ES, SPA},
 		EnglishName: "Spanish",
