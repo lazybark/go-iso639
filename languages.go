@@ -166,6 +166,7 @@ var (
 		Codes:       []Code{BA, BAK},
 		EnglishName: "Bashkir",
 		Scope:       Individual,
+		Type:        Living,
 		Family:      Turkic,
 		NativeNames: []string{"Башҡорт теле", "Başqort tele"}}
 	Basque = Language{
@@ -1387,6 +1388,7 @@ var (
 		EnglishName: "Tibetan",
 		Scope:       Individual,
 		Family:      SinoTibetan,
+		Type:        Living,
 		NativeNames: []string{"བོད་སྐད་", "Bodskad", "ལྷ་སའི་སྐད་", "Lhas'iskad"}}
 	Tigrinya = Language{
 		Codes:       []Code{TI, TIR},

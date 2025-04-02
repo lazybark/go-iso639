@@ -636,9 +636,9 @@ const (
 	Individual Scope = "Individual"
 	Macro      Scope = "Macrolanguage"
 
-	Living      Type = "Living"
-	Constructed Type = "Constructed"
 	Ancient     Type = "Ancient"
+	Constructed Type = "Constructed"
+	Living      Type = "Living"
 
 	Africa       Region = "Africa"
 	Asia         Region = "Asia"
