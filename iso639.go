@@ -30,14 +30,18 @@ type Variant struct {
 
 // ByCode fetches a language by its Alpha-1,2 or 3 code or by variant code.
 func ByCode(code string) *Language {
-	for _, lang := range LanguageMap {
-		if slices.Contains(lang.Codes, Code(code)) {
-			return &lang
+	for lang := range LanguageMap {
+		if slices.Contains(LanguageMap[lang].Codes, Code(code)) {
+			result := LanguageMap[lang]
+
+			return &result
 		}
 
-		for _, variant := range lang.Variants {
+		for _, variant := range LanguageMap[lang].Variants {
 			if variant.Code == Code(code) {
-				return &lang
+				result := LanguageMap[lang]
+
+				return &result
 			}
 		}
 	}
@@ -47,22 +51,30 @@ func ByCode(code string) *Language {
 
 // ByName fetches a language by its English or native name or by variant name.
 func ByName(name string) *Language {
-	for _, lang := range LanguageMap {
-		if lang.EnglishName == name {
-			return &lang
+	for lang := range LanguageMap {
+		if LanguageMap[lang].EnglishName == name {
+			result := LanguageMap[lang]
+
+			return &result
 		}
 
-		if slices.Contains(lang.NativeNames, name) {
-			return &lang
+		if slices.Contains(LanguageMap[lang].NativeNames, name) {
+			result := LanguageMap[lang]
+
+			return &result
 		}
 
-		for _, variant := range lang.Variants {
+		for _, variant := range LanguageMap[lang].Variants {
 			if variant.EnglishName == name {
-				return &lang
+				result := LanguageMap[lang]
+
+				return &result
 			}
 
 			if slices.Contains(variant.NativeNames, name) {
-				return &lang
+				result := LanguageMap[lang]
+
+				return &result
 			}
 		}
 	}
@@ -74,9 +86,9 @@ func ByName(name string) *Language {
 func ByType(t Type) []Language {
 	langs := make([]Language, 0)
 
-	for _, lang := range LanguageMap {
-		if lang.Type == t {
-			langs = append(langs, lang)
+	for lang := range LanguageMap {
+		if LanguageMap[lang].Type == t {
+			langs = append(langs, LanguageMap[lang])
 		}
 	}
 
@@ -87,9 +99,9 @@ func ByType(t Type) []Language {
 func ByScope(scope Scope) []Language {
 	langs := make([]Language, 0)
 
-	for _, lang := range LanguageMap {
-		if lang.Scope == scope {
-			langs = append(langs, lang)
+	for lang := range LanguageMap {
+		if LanguageMap[lang].Scope == scope {
+			langs = append(langs, LanguageMap[lang])
 		}
 	}
 
@@ -100,9 +112,9 @@ func ByScope(scope Scope) []Language {
 func ByFamily(family string) []Language {
 	langs := make([]Language, 0)
 
-	for _, lang := range LanguageMap {
-		if lang.Family == Family(family) {
-			langs = append(langs, lang)
+	for lang := range LanguageMap {
+		if LanguageMap[lang].Family == Family(family) {
+			langs = append(langs, LanguageMap[lang])
 		}
 	}
 
@@ -113,9 +125,9 @@ func ByFamily(family string) []Language {
 func ByScript(script string) []Language {
 	langs := make([]Language, 0)
 
-	for _, lang := range LanguageMap {
-		if slices.Contains(lang.Scripts, Script(script)) {
-			langs = append(langs, lang)
+	for lang := range LanguageMap {
+		if slices.Contains(LanguageMap[lang].Scripts, Script(script)) {
+			langs = append(langs, LanguageMap[lang])
 		}
 	}
 
@@ -126,9 +138,9 @@ func ByScript(script string) []Language {
 func ByRegion(region string) []Language {
 	langs := make([]Language, 0)
 
-	for _, lang := range LanguageMap {
-		if slices.Contains(lang.Regions, Region(region)) {
-			langs = append(langs, lang)
+	for lang := range LanguageMap {
+		if slices.Contains(LanguageMap[lang].Regions, Region(region)) {
+			langs = append(langs, LanguageMap[lang])
 		}
 	}
 
@@ -139,8 +151,8 @@ func ByRegion(region string) []Language {
 func GetAllLanguages() []Language {
 	langs := make([]Language, 0, len(LanguageMap))
 
-	for _, lang := range LanguageMap {
-		langs = append(langs, lang)
+	for lang := range LanguageMap {
+		langs = append(langs, LanguageMap[lang])
 	}
 
 	return langs
