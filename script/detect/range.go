@@ -75,10 +75,12 @@ var scriptRanges = []ScriptRange{
 
 func GetDominantScript(text string) string {
 	scriptCount := make(map[string]int)
+
 	for _, char := range text {
 		for _, script := range scriptRanges {
 			if char >= script.Start && char <= script.End {
 				scriptCount[script.Name]++
+
 				break
 			}
 		}

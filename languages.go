@@ -941,7 +941,7 @@ var (
 		Scope:       Individual,
 		Type:        Living,
 		Family:      Austronesian,
-		NativeNames: []string{"kajin M̧ajel‌̧", "Ebon"}}
+		NativeNames: []string{"kajin M̧ajel\u200c", "Ebon"}}
 	Mongolian = Language{
 		Codes:       []Code{MN, MON},
 		EnglishName: "Mongolian",
