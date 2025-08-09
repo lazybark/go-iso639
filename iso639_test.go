@@ -1,6 +1,9 @@
 package iso639
 
-import "testing"
+import (
+	"slices"
+	"testing"
+)
 
 func TestByCode(t *testing.T) {
 	tests := []struct {
@@ -45,13 +48,26 @@ func TestByName(t *testing.T) {
 }
 
 func TestByType(t *testing.T) {
+	var living, ancient, constructed int
+
+	for _, lang := range LanguageMap {
+		switch lang.Type {
+		case Living:
+			living++
+		case Ancient:
+			ancient++
+		case Constructed:
+			constructed++
+		}
+	}
+
 	tests := []struct {
 		typ      Type
 		expected int
 	}{
-		{Living, 87},     // Count will change based on language data.
-		{Ancient, 5},     // Count will change based on language data.
-		{Constructed, 0}, // Count will change based on language data.
+		{Living, living},
+		{typ: Ancient, expected: ancient},
+		{Constructed, constructed},
 	}
 
 	for _, test := range tests {
@@ -63,12 +79,23 @@ func TestByType(t *testing.T) {
 }
 
 func TestByScope(t *testing.T) {
+	var individual, macro int
+
+	for _, lang := range LanguageMap {
+		switch lang.Scope {
+		case Individual:
+			individual++
+		case Macro:
+			macro++
+		}
+	}
+
 	tests := []struct {
 		scope    Scope
 		expected int
 	}{
-		{Individual, 308}, // Count will change based on language data.
-		{Macro, 307},      // Count will change based on language data.
+		{Individual, individual},
+		{Macro, macro},
 	}
 
 	for _, test := range tests {
@@ -80,12 +107,23 @@ func TestByScope(t *testing.T) {
 }
 
 func TestByFamily(t *testing.T) {
+	var indoeuropean, sinoTibetan int
+
+	for _, lang := range LanguageMap {
+		switch lang.Family {
+		case IndoEuropean:
+			indoeuropean++
+		case SinoTibetan:
+			sinoTibetan++
+		}
+	}
+
 	tests := []struct {
 		family   string
 		expected int
 	}{
-		{"Indo-European", 29}, // Count will change based on language data.
-		{"Sino-Tibetan", 0},   // Count will change based on language data.
+		{string(IndoEuropean), indoeuropean},
+		{string(SinoTibetan), sinoTibetan},
 		{"Unknown", 0},
 	}
 
@@ -98,12 +136,24 @@ func TestByFamily(t *testing.T) {
 }
 
 func TestByScript(t *testing.T) {
+	var latin, chinese int
+
+	for _, lang := range LanguageMap {
+		if slices.Contains(lang.Scripts, LatinScript) {
+			latin++
+		}
+
+		if slices.Contains(lang.Scripts, ChineseScript) {
+			chinese++
+		}
+	}
+
 	tests := []struct {
 		script   string
 		expected int
 	}{
-		{"Latin", 79},   // Count will change based on language data.
-		{"Chinese", 22}, // Count will change based on language data.
+		{string(LatinScript), latin},
+		{string(ChineseScript), chinese},
 		{"Unknown", 0},
 	}
 
@@ -116,12 +166,24 @@ func TestByScript(t *testing.T) {
 }
 
 func TestByRegion(t *testing.T) {
+	var europe, asia int
+
+	for _, lang := range LanguageMap {
+		if slices.Contains(lang.Regions, Europe) {
+			europe++
+		}
+
+		if slices.Contains(lang.Regions, Asia) {
+			asia++
+		}
+	}
+
 	tests := []struct {
 		region   string
 		expected int
 	}{
-		{"Europe", 13}, // Count will change based on language data.
-		{"Asia", 80},   // Count will change based on language data.
+		{string(Europe), europe},
+		{string(Asia), asia},
 		{"Unknown", 0},
 	}
 
@@ -136,6 +198,7 @@ func TestByRegion(t *testing.T) {
 func TestGetAllLanguages(t *testing.T) {
 	langs := GetAllLanguages()
 	expectedCount := len(LanguageMap) // Count will change based on language data.
+
 	if len(langs) != expectedCount {
 		t.Errorf("GetAllLanguages() = %d; want %d", len(langs), expectedCount)
 	}
