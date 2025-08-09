@@ -5,3 +5,6 @@ test:
 
 lint:
 	docker run --rm -v $(PWD):/app -w /app golangci/golangci-lint:v1.64 golangci-lint run
+
+bench:
+	go test -bench=. -benchmem

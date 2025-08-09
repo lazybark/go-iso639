@@ -1,6 +1,10 @@
 package iso639
 
-import "slices"
+import (
+	"slices"
+	"strings"
+	"sync"
+)
 
 type Code string
 type Type string
@@ -8,6 +12,74 @@ type Scope string
 type Script string
 type Family string
 type Region string
+
+// Pre-computed indexes for O(1) lookups.
+var (
+	codeIndex     map[string]*Language
+	nameIndex     map[string]*Language
+	scriptIndex   map[Script][]*Language
+	familyIndex   map[Family][]*Language
+	regionIndex   map[Region][]*Language
+	typeIndex     map[Type][]*Language
+	scopeIndex    map[Scope][]*Language
+	indexInitOnce sync.Once
+)
+
+// initIndexes builds lookup indexes for O(1) performance.
+func initIndexes() {
+	codeIndex = make(map[string]*Language)
+	nameIndex = make(map[string]*Language)
+	scriptIndex = make(map[Script][]*Language)
+	familyIndex = make(map[Family][]*Language)
+	regionIndex = make(map[Region][]*Language)
+	typeIndex = make(map[Type][]*Language)
+	scopeIndex = make(map[Scope][]*Language)
+
+	for key := range LanguageMap {
+		lang := LanguageMap[key]
+		langPtr := &lang
+
+		// Index all codes (case-insensitive).
+		for _, code := range lang.Codes {
+			codeIndex[strings.ToLower(string(code))] = langPtr
+		}
+
+		// Index English and native names (case-insensitive).
+		nameIndex[strings.ToLower(lang.EnglishName)] = langPtr
+		for _, nativeName := range lang.NativeNames {
+			nameIndex[strings.ToLower(nativeName)] = langPtr
+		}
+
+		// Index variant codes and names.
+		for _, variant := range lang.Variants {
+			codeIndex[strings.ToLower(string(variant.Code))] = langPtr
+			nameIndex[strings.ToLower(variant.EnglishName)] = langPtr
+
+			for _, variantNativeName := range variant.NativeNames {
+				nameIndex[strings.ToLower(variantNativeName)] = langPtr
+			}
+		}
+
+		// Index by type, scope, family.
+		typeIndex[lang.Type] = append(typeIndex[lang.Type], langPtr)
+		scopeIndex[lang.Scope] = append(scopeIndex[lang.Scope], langPtr)
+		familyIndex[lang.Family] = append(familyIndex[lang.Family], langPtr)
+
+		// Index by scripts and regions.
+		for _, script := range lang.Scripts {
+			scriptIndex[script] = append(scriptIndex[script], langPtr)
+		}
+
+		for _, region := range lang.Regions {
+			regionIndex[region] = append(regionIndex[region], langPtr)
+		}
+	}
+}
+
+// ensureInitialized makes sure indexes are built (thread-safe).
+func ensureInitialized() {
+	indexInitOnce.Do(initIndexes)
+}
 
 // Language represents an ISO 639 language.
 type Language struct {
@@ -29,131 +101,80 @@ type Variant struct {
 }
 
 // ByCode fetches a language by its Alpha-1,2 or 3 code or by variant code.
+// Case-insensitive lookup with O(1) performance.
 func ByCode(code string) *Language {
-	for lang := range LanguageMap {
-		if slices.Contains(LanguageMap[lang].Codes, Code(code)) {
-			result := LanguageMap[lang]
+	ensureInitialized()
+	return codeIndex[strings.ToLower(code)]
+}
 
-			return &result
-		}
-
-		for _, variant := range LanguageMap[lang].Variants {
-			if variant.Code == Code(code) {
-				result := LanguageMap[lang]
-
-				return &result
-			}
-		}
-	}
-
-	return nil
+// ByCodeIgnoreCase is an alias for ByCode (which is already case-insensitive).
+// Kept for backward compatibility.
+func ByCodeIgnoreCase(code string) *Language {
+	return ByCode(code)
 }
 
 // ByName fetches a language by its English or native name or by variant name.
+// Case-insensitive lookup with O(1) performance.
 func ByName(name string) *Language {
-	for lang := range LanguageMap {
-		if LanguageMap[lang].EnglishName == name {
-			result := LanguageMap[lang]
+	ensureInitialized()
+	return nameIndex[strings.ToLower(name)]
+}
 
-			return &result
-		}
-
-		if slices.Contains(LanguageMap[lang].NativeNames, name) {
-			result := LanguageMap[lang]
-
-			return &result
-		}
-
-		for _, variant := range LanguageMap[lang].Variants {
-			if variant.EnglishName == name {
-				result := LanguageMap[lang]
-
-				return &result
-			}
-
-			if slices.Contains(variant.NativeNames, name) {
-				result := LanguageMap[lang]
-
-				return &result
-			}
-		}
-	}
-
-	return nil
+// ByNameIgnoreCase is an alias for ByName (which is already case-insensitive).
+// Kept for backward compatibility.
+func ByNameIgnoreCase(name string) *Language {
+	return ByName(name)
 }
 
 // ByType fetches all languages that have a specific type.
-func ByType(t Type) []Language {
-	langs := make([]Language, 0)
-
-	for lang := range LanguageMap {
-		if LanguageMap[lang].Type == t {
-			langs = append(langs, LanguageMap[lang])
-		}
-	}
-
-	return langs
+func ByType(t Type) []*Language {
+	ensureInitialized()
+	return typeIndex[t]
 }
 
 // ByScope fetches all languages that have a specific scope.
-func ByScope(scope Scope) []Language {
-	langs := make([]Language, 0)
-
-	for lang := range LanguageMap {
-		if LanguageMap[lang].Scope == scope {
-			langs = append(langs, LanguageMap[lang])
-		}
-	}
-
-	return langs
+func ByScope(scope Scope) []*Language {
+	ensureInitialized()
+	return scopeIndex[scope]
 }
 
 // ByFamily fetches all languages that belong to a specific family.
-func ByFamily(family string) []Language {
-	langs := make([]Language, 0)
-
-	for lang := range LanguageMap {
-		if LanguageMap[lang].Family == Family(family) {
-			langs = append(langs, LanguageMap[lang])
-		}
-	}
-
-	return langs
+func ByFamily(family string) []*Language {
+	ensureInitialized()
+	return familyIndex[Family(family)]
 }
 
 // ByScript fetches all languages that use a specific script.
-func ByScript(script string) []Language {
-	langs := make([]Language, 0)
-
-	for lang := range LanguageMap {
-		if slices.Contains(LanguageMap[lang].Scripts, Script(script)) {
-			langs = append(langs, LanguageMap[lang])
-		}
-	}
-
-	return langs
+func ByScript(script string) []*Language {
+	ensureInitialized()
+	return scriptIndex[Script(script)]
 }
 
 // ByRegion fetches all languages spoken in a specific region.
-func ByRegion(region string) []Language {
-	langs := make([]Language, 0)
+func ByRegion(region string) []*Language {
+	ensureInitialized()
+	return regionIndex[Region(region)]
+}
 
-	for lang := range LanguageMap {
-		if slices.Contains(LanguageMap[lang].Regions, Region(region)) {
-			langs = append(langs, LanguageMap[lang])
-		}
+// GetAllLanguages returns all defined languages as a slice of pointers.
+func GetAllLanguages() []*Language {
+	ensureInitialized()
+	langs := make([]*Language, 0, len(LanguageMap))
+
+	for key := range LanguageMap {
+		lang := LanguageMap[key]
+		langs = append(langs, &lang)
 	}
 
 	return langs
 }
 
-// GetAllLanguages returns all defined languages as a slice.
-func GetAllLanguages() []Language {
-	langs := make([]Language, 0, len(LanguageMap))
+// IsValidCode checks if a code exists without returning the language.
+func IsValidCode(code string) bool {
+	return ByCode(code) != nil
+}
 
-	for lang := range LanguageMap {
-		langs = append(langs, LanguageMap[lang])
-	}
-
-	return langs
+// HasScript checks if a language supports a specific script.
+func HasScript(lang *Language, script Script) bool {
+	return slices.Contains(lang.Scripts, script)
 }

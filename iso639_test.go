@@ -203,3 +203,39 @@ func TestGetAllLanguages(t *testing.T) {
 		t.Errorf("GetAllLanguages() = %d; want %d", len(langs), expectedCount)
 	}
 }
+
+func TestCaseInsensitiveSearch(t *testing.T) {
+	tests := []struct {
+		code     string
+		expected string
+	}{
+		{"EN", "English"},
+		{"en", "English"},
+		{"En", "English"},
+	}
+
+	for _, test := range tests {
+		lang := ByCodeIgnoreCase(test.code)
+		if lang == nil || lang.EnglishName != test.expected {
+			t.Errorf("ByCodeIgnoreCase(%s) failed", test.code)
+		}
+	}
+}
+
+func BenchmarkByCode(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		ByCode("en")
+	}
+}
+
+func BenchmarkByName(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		ByName("English")
+	}
+}
+
+func BenchmarkByNameIgnoreCase(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		ByNameIgnoreCase("english")
+	}
+}
