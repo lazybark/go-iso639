@@ -16,7 +16,7 @@ func TestGetDominantScript(t *testing.T) {
 		{"Привет, мир! Hello", "Cyrillic"},
 		{"مرحبا بالعالم", "Arabic"},
 		{"Hello مرحبا بالعالم", "Arabic"},
-		{"שלום עולםمرحبا بال ", "Hebrew"},
+		{"שלום עוללום עולםمرحبا بال ", "Hebrew"},
 		{"שלום עולם", "Hebrew"},
 		{"नमस्ते दुनिया", "Devanagari"},
 		{"こんにちは世界", "Hiragana"},
