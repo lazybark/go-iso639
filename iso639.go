@@ -104,6 +104,7 @@ type Variant struct {
 // Case-insensitive lookup with O(1) performance.
 func ByCode(code string) *Language {
 	ensureInitialized()
+
 	return codeIndex[strings.ToLower(code)]
 }
 
@@ -117,6 +118,7 @@ func ByCodeIgnoreCase(code string) *Language {
 // Case-insensitive lookup with O(1) performance.
 func ByName(name string) *Language {
 	ensureInitialized()
+
 	return nameIndex[strings.ToLower(name)]
 }
 
@@ -129,36 +131,42 @@ func ByNameIgnoreCase(name string) *Language {
 // ByType fetches all languages that have a specific type.
 func ByType(t Type) []*Language {
 	ensureInitialized()
+
 	return typeIndex[t]
 }
 
 // ByScope fetches all languages that have a specific scope.
 func ByScope(scope Scope) []*Language {
 	ensureInitialized()
+
 	return scopeIndex[scope]
 }
 
 // ByFamily fetches all languages that belong to a specific family.
 func ByFamily(family string) []*Language {
 	ensureInitialized()
+
 	return familyIndex[Family(family)]
 }
 
 // ByScript fetches all languages that use a specific script.
 func ByScript(script string) []*Language {
 	ensureInitialized()
+
 	return scriptIndex[Script(script)]
 }
 
 // ByRegion fetches all languages spoken in a specific region.
 func ByRegion(region string) []*Language {
 	ensureInitialized()
+
 	return regionIndex[Region(region)]
 }
 
 // GetAllLanguages returns all defined languages as a slice of pointers.
 func GetAllLanguages() []*Language {
 	ensureInitialized()
+
 	langs := make([]*Language, 0, len(LanguageMap))
 
 	for key := range LanguageMap {
