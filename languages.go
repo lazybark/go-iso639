@@ -17,7 +17,7 @@ var (
 		Regions:     []Region{Africa},
 		Type:        Living,
 		Scripts:     []Script{LatinScript},
-		Family:      Afroasiatic,
+		Family:      AfroAsiatic,
 		NativeNames: []string{"Qafar af"}}
 	Afrikaans = Language{
 		Codes:       []Code{AF, AFR},
@@ -44,6 +44,7 @@ var (
 		Codes:       []Code{SQ, SQI, ALB},
 		EnglishName: "Albanian",
 		Scope:       Macro,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Shqip"},
 		Type:        Living,
 		Variants: []Variant{
@@ -58,7 +59,7 @@ var (
 		Type:        Living,
 		Scope:       Macro,
 		Scripts:     []Script{ArabicScript, LatinScript},
-		Family:      Afroasiatic,
+		Family:      AfroAsiatic,
 		Regions:     []Region{Africa, Asia, Eurasia, MiddleEast},
 		NativeNames: []string{"اَلْعَرَبِيَّةُ", "al-ʿarabiyyah"},
 		Variants: []Variant{
@@ -96,24 +97,28 @@ var (
 		EnglishName: "Aragonese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Aragonés"}}
 	Amharic = Language{
 		Codes:       []Code{AM, AMH},
 		EnglishName: "Amharic",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      AfroAsiatic,
 		NativeNames: []string{"አማርኛ", "Amarəñña"}}
 	Armenian = Language{
 		Codes:       []Code{HY, HYE, ARM},
 		EnglishName: "Armenian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Հայերեն", "Hayeren"}}
 	Assamese = Language{
 		Codes:       []Code{AS, ASM},
 		EnglishName: "Assamese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		Scripts:     []Script{LatinScript, BengaliAssameseScript},
 		NativeNames: []string{"অসমীয়া", "Ôxômiya"}}
 	Avaric = Language{
@@ -121,18 +126,21 @@ var (
 		EnglishName: "Avaric",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NortheastCaucasian,
 		NativeNames: []string{"Авар мацӏ", "اوار ماض", "Avar maz"}}
 	Avestan = Language{
 		Codes:       []Code{AE, AVE},
 		EnglishName: "Avestan",
 		Scope:       Individual,
 		Type:        Ancient,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Upastawakaēna"}}
 	Aymara = Language{
 		Codes:       []Code{AY, AYM},
 		EnglishName: "Aymara",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Aymaran,
 		NativeNames: []string{"Aymara"},
 		Variants: []Variant{
 			{Code: AYC, EnglishName: "Southern Aymara"},
@@ -142,6 +150,7 @@ var (
 		EnglishName: "Azerbaijani",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Azərbaycan dili", "آذربایجان دیلی", "Азәрбајҹан дили"},
 		Variants: []Variant{
 			{Code: AZJ, EnglishName: "North Azerbaijani"},
@@ -151,83 +160,98 @@ var (
 		EnglishName: "Bambara",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"بَمَنَنكَن", "Bamanankan"}}
 	Bashkir = Language{
 		Codes:       []Code{BA, BAK},
 		EnglishName: "Bashkir",
 		Scope:       Individual,
+		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Башҡорт теле", "Başqort tele"}}
 	Basque = Language{
 		Codes:       []Code{EU, EUS, BAQ},
 		EnglishName: "Basque",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      LanguageIsolate,
 		NativeNames: []string{"Euskara"}}
 	Belarusian = Language{
 		Codes:       []Code{BE, BEL},
 		EnglishName: "Belarusian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Беларуская мова", "Belaruskaâ mova"}}
 	Bengali = Language{
 		Codes:       []Code{BN, BEN},
 		EnglishName: "Bengali",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		Scripts:     []Script{BengaliAssameseScript},
 		NativeNames: []string{"বাংলা", "Bāŋlā"}}
 	Bislama = Language{
 		Codes:       []Code{BI, BIS},
 		EnglishName: "Bislama",
 		Scope:       Individual,
+		Family:      Creole,
 	}
 	Bosnian = Language{
 		Codes:       []Code{BS, BOS},
 		EnglishName: "Bosnian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Босански", "Bosanski"}}
 	Breton = Language{
 		Codes:       []Code{BR, BRE},
 		EnglishName: "Breton",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Brezhoneg"}}
 	Bulgarian = Language{
 		Codes:       []Code{BG, BUL},
 		EnglishName: "Bulgarian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Български", "Bulgarski"}}
 	Burmese = Language{
 		Codes:       []Code{MY, MYA, BUR},
 		EnglishName: "Burmese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      SinoTibetan,
 		NativeNames: []string{"မြန်မာစာ", "Mrãmācā"}}
 	Catalan = Language{
 		Codes:       []Code{CA, CAT},
 		EnglishName: "Catalan",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Valencian", "Català", "Valencià"}}
 	Chamorro = Language{
 		Codes:       []Code{CH, CHA},
 		EnglishName: "Chamorro",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"Finu' Chamoru"}}
 	Chechen = Language{
 		Codes:       []Code{CE, CHE},
 		EnglishName: "Chechen",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NortheastCaucasian,
 		NativeNames: []string{"Нохчийн мотт", "Noxçiyn mott", "Chechnyan", "Chechnian"}}
 	Cherokee = Language{
 		Codes:       []Code{CHR},
 		EnglishName: "Cherokee",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Iroquoian,
 		Scripts:     []Script{CherokeeScript, LatinScript},
 		NativeNames: []string{"ᏣᎳᎩ", "Tsalagi Gawonihisdi"}}
 	Chichewa = Language{
@@ -235,12 +259,14 @@ var (
 		EnglishName: "Chichewa",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Chewa", "Nyanja", "Chinyanja"}}
 	Chinese = Language{
 		Codes:       []Code{ZH, ZHO, CHI},
 		EnglishName: "Chinese",
 		Type:        Living,
 		Scope:       Macro,
+		Family:      SinoTibetan,
 		Scripts:     []Script{ChineseScript, LatinScript},
 		Regions:     []Region{Asia, Eurasia, Oceania},
 		NativeNames: []string{"中文", "Zhōngwén", "汉语", "漢語", "Hànyǔ"},
@@ -269,30 +295,35 @@ var (
 		EnglishName: "Church Slavonic",
 		Scope:       Individual,
 		Type:        Ancient,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Славе́нскїй ѧ҆зы́къ"}}
 	Chuvash = Language{
 		Codes:       []Code{CV, CHV},
 		EnglishName: "Chuvash",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Чăвашла", "Çăvaşla"}}
 	Cornish = Language{
 		Codes:       []Code{KW, COR},
 		EnglishName: "Cornish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Kernowek"}}
 	Corsican = Language{
 		Codes:       []Code{CO, COS},
 		EnglishName: "Corsican",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Corsu"}}
 	Cree = Language{
 		Codes:       []Code{CR, CRE},
 		EnglishName: "Cree",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Algic,
 		NativeNames: []string{"ᓀᐦᐃᔭᐁᐧᐃᐧᐣ", "Nehiyawewin"},
 		Variants: []Variant{
 			{Code: CRJ, EnglishName: "Southern East Cree"},
@@ -306,30 +337,35 @@ var (
 		EnglishName: "Croatian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Hrvatski", "Crovatian"}}
 	Czech = Language{
 		Codes:       []Code{CS, CES, CZE},
 		EnglishName: "Czech",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Čeština", "Czechian"}}
 	Danish = Language{
 		Codes:       []Code{DA, DAN},
 		EnglishName: "Danish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Dansk"}}
 	Divehi = Language{
 		Codes:       []Code{DV, DIV},
 		EnglishName: "Divehi",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Dhivehi", "Maldivian", "ދިވެހި "}}
 	Dutch = Language{
 		Codes:       []Code{NL, NLD, DUT},
 		EnglishName: "Dutch",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Flemish", "Nederlands"},
 		Variants: []Variant{
 			{Code: VLS, EnglishName: "West Flemish"}}}
@@ -338,6 +374,7 @@ var (
 		EnglishName: "Dzongkha",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      SinoTibetan,
 		NativeNames: []string{"རྫོང་ཁ་", "Bhutanese"}}
 	English = Language{
 		Codes:       []Code{EN, ENG},
@@ -359,6 +396,7 @@ var (
 		EnglishName: "Estonian",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Uralic,
 		NativeNames: []string{"Eesti keel"},
 		Variants: []Variant{
 			{Code: VRO, EnglishName: "Võro"},
@@ -368,42 +406,49 @@ var (
 		EnglishName: "Ewe",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Èʋegbe"}}
 	Faroese = Language{
 		Codes:       []Code{FO, FAO},
 		EnglishName: "Faroese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Føroyskt"}}
 	Fijian = Language{
 		Codes:       []Code{FJ, FIJ},
 		EnglishName: "Fijian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"Na Vosa Vakaviti"}}
 	Finnish = Language{
 		Codes:       []Code{FI, FIN},
 		EnglishName: "Finnish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Uralic,
 		NativeNames: []string{"Suomi"}}
 	French = Language{
 		Codes:       []Code{FR, FRA, FRE},
 		EnglishName: "French",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Français"}}
 	WesternFrisian = Language{
 		Codes:       []Code{FY, FRY},
 		EnglishName: "Western Frisian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Frysk", "West Frisian", "Frisian", "Fries"}}
 	Fulah = Language{
 		Codes:       []Code{FF, FUL},
 		EnglishName: "Fulah",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"𞤊𞤵𞤤𞤬𞤵𞤤𞤣𞤫", "ࢻُلْࢻُلْدٜ", "Fulfulde", "𞤆𞤵𞤤𞤢𞥄𞤪", "ݒُلَارْ", "Pulaar"},
 		Variants: []Variant{
 			{Code: FFM, EnglishName: "Maasina Fulfulde"},
@@ -420,48 +465,56 @@ var (
 		EnglishName: "Gaelic",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Scottish Gaelic", "Gàidhlig"}}
 	Galician = Language{
 		Codes:       []Code{GL, GLG},
 		EnglishName: "Galician",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Galego"}}
 	Ganda = Language{
 		Codes:       []Code{LG, LUG},
 		EnglishName: "Ganda",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Luganda"}}
 	Georgian = Language{
 		Codes:       []Code{KA, KAT},
 		EnglishName: "Georgian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Kartvelian,
 		NativeNames: []string{"ქართული", "Kharthuli"}}
 	German = Language{
 		Codes:       []Code{DE, DEU},
 		EnglishName: "German",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Deutsch"}}
 	Greek = Language{
 		Codes:       []Code{EL, ELL},
 		EnglishName: "Greek",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Νέα Ελληνικά", "Néa Ellêniká"}}
 	Greenlandic = Language{
 		Codes:       []Code{KL, KAL},
 		EnglishName: "Greenlandic",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Eskaleut,
 		NativeNames: []string{"Kalaallisut"}}
 	Guarani = Language{
 		Codes:       []Code{GN, GRN},
 		EnglishName: "Guarani",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Tupian,
 		NativeNames: []string{"Avañe'ẽ"},
 		Variants: []Variant{
 			{Code: GNW, EnglishName: "Western Bolivian Guaraní"},
@@ -474,54 +527,63 @@ var (
 		EnglishName: "Gujarati",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"ગુજરાતી", "Gujarātī"}}
 	Haitian = Language{
 		Codes:       []Code{HT, HAT},
 		EnglishName: "Haitian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      FrenchCreole,
 		NativeNames: []string{"Haitian Creole", "Kreyòl ayisyen"}}
 	Hausa = Language{
 		Codes:       []Code{HA, HAU},
 		EnglishName: "Hausa",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      AfroAsiatic,
 		NativeNames: []string{"هَرْشٜن هَوْس", "halshen Hausa"}}
 	Hebrew = Language{
 		Codes:       []Code{HE, HEB},
 		EnglishName: "Hebrew",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      AfroAsiatic,
 		NativeNames: []string{"עברית", "Ivrit"}}
 	Herero = Language{
 		Codes:       []Code{HZ, HER},
 		EnglishName: "Herero",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Otjiherero"}}
 	Hindi = Language{
 		Codes:       []Code{HI, HIN},
 		EnglishName: "Hindi",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"हिन्दी", "Hindī"}}
 	HiriMotu = Language{
 		Codes:       []Code{HO, HMO},
 		EnglishName: "Hiri Motu",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"Police Motu"}}
 	Hungarian = Language{
 		Codes:       []Code{HU, HUN},
 		EnglishName: "Hungarian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Uralic,
 		NativeNames: []string{"Magyar nyelv"}}
 	Icelandic = Language{
 		Codes:       []Code{IS, ISL},
 		EnglishName: "Icelandic",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Íslenska"}}
 	Ido = Language{
 		Codes:       []Code{IO, IDO},
@@ -534,12 +596,14 @@ var (
 		EnglishName: "Igbo",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"ásụ̀sụ́ Ìgbò"}}
 	Indonesian = Language{
 		Codes:       []Code{ID, IND},
 		EnglishName: "Indonesian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"bahasa Indonesia"}}
 	Interlingua = Language{
 		Codes:       []Code{IA, INA},
@@ -558,6 +622,7 @@ var (
 		EnglishName: "Inuktitut",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Eskaleut,
 		NativeNames: []string{"ᐃᓄᒃᑎᑐᑦ"},
 		Variants: []Variant{
 			{Code: IKE, EnglishName: "Eastern Canadian Inuktitut"},
@@ -567,6 +632,7 @@ var (
 		EnglishName: "Inupiaq",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Eskaleut,
 		NativeNames: []string{"Iñupiaq"},
 		Variants: []Variant{
 			{Code: ESI, EnglishName: "North Alaskan Inupiatun"},
@@ -576,36 +642,42 @@ var (
 		EnglishName: "Irish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Gaeilge"}}
 	Italian = Language{
 		Codes:       []Code{IT, ITA},
 		EnglishName: "Italian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Italiano"}}
 	Japanese = Language{
 		Codes:       []Code{JA, JPN},
 		EnglishName: "Japanese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Japonic,
 		NativeNames: []string{"日本語", "Nihongo"}}
 	Javanese = Language{
 		Codes:       []Code{JV, JAV},
 		EnglishName: "Javanese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"ꦧꦱꦗꦮ", "basa Jawa"}}
 	Kannada = Language{
 		Codes:       []Code{KN, KAN},
 		EnglishName: "Kannada",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Dravidian,
 		NativeNames: []string{"ಕನ್ನಡ", "Kannaḍa"}}
 	Kanuri = Language{
 		Codes:       []Code{KR, KAU},
 		EnglishName: "Kanuri",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      NiloSaharan,
 		NativeNames: []string{"كَنُرِيِه", "Kànùrí"},
 		Variants: []Variant{
 			{Code: KBY, EnglishName: "Manga Kanuri"},
@@ -616,41 +688,48 @@ var (
 		EnglishName: "Kashmiri",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"कॉशुर", "كأشُر", "Kosher"}}
 	Kazakh = Language{
 		Codes:       []Code{KK, KAZ},
 		EnglishName: "Kazakh",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Қазақша", "Qazaqşa"}}
 	CentralKhmer = Language{
 		Codes:       []Code{KM, KHM},
 		EnglishName: "Central Khmer",
 		Type:        Living,
+		Family:      AustroAsiatic,
 		NativeNames: []string{"ខេមរភាសា", "Khémôrôphéasa", "Khmer", "Cambodian"}}
 	Kikuyu = Language{
 		Codes:       []Code{KI, KIK},
 		EnglishName: "Kikuyu",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Gikuyu", "Gĩgĩkũyũ"}}
 	Kinyarwanda = Language{
 		Codes:       []Code{RW, KIN},
 		EnglishName: "Kinyarwanda",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Ikinyarwanda"}}
 	Kirghiz = Language{
 		Codes:       []Code{KY, KIR},
 		EnglishName: "Kirghiz",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Kyrgyz", "Кыргызча", "Kırgızça"}}
 	Komi = Language{
 		Codes:       []Code{KV, KOM},
 		EnglishName: "Komi",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Uralic,
 		NativeNames: []string{"Коми кыв", "Zyran", "Zyrian"},
 		Variants: []Variant{
 			{Code: KOI, EnglishName: "Komi-Permyak"},
@@ -660,6 +739,7 @@ var (
 		EnglishName: "Kongo",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Kikongo"},
 		Variants: []Variant{
 			{Code: KNG, EnglishName: "Koongo"},
@@ -670,12 +750,14 @@ var (
 		EnglishName: "Korean",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Koreanic,
 		NativeNames: []string{"한국어", "조선말", "Hangugeo", "Chosŏnmal"}}
 	Kuanyama = Language{
 		Codes:       []Code{KJ, KUA},
 		EnglishName: "Kuanyama",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Kwanyama"}}
 	Kurdish = Language{
 		Codes:       []Code{KU, KUR},
@@ -695,18 +777,21 @@ var (
 		EnglishName: "Lao",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      TaiKadai,
 		NativeNames: []string{"ພາສາລາວ", "phasa Lao"}}
 	Latin = Language{
 		Codes:       []Code{LA, LAT},
 		EnglishName: "Latin",
 		Scope:       Individual,
 		Type:        Ancient,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Latinum"}}
 	Latvian = Language{
 		Codes:       []Code{LV, LAV},
 		EnglishName: "Latvian",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Latviski"},
 		Variants: []Variant{
 			{Code: LTG, EnglishName: "Latgalian"},
@@ -716,42 +801,49 @@ var (
 		EnglishName: "Limburgan",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Limburger", "Limburgish", "Lèmburgs"}}
 	Lingala = Language{
 		Codes:       []Code{LN, LIN},
 		EnglishName: "Lingala",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Lingála"}}
 	Lithuanian = Language{
 		Codes:       []Code{LT, LIT},
 		EnglishName: "Lithuanian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Lietuviškai"}}
 	LubaKatanga = Language{
 		Codes:       []Code{LU, LUB},
 		EnglishName: "Luba-Katanga",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Kiluba", "Luba-Shaba"}}
 	Luxembourgish = Language{
 		Codes:       []Code{LB, LTZ},
 		EnglishName: "Luxembourgish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Letzeburgesch", "Lëtzebuergesch", "Luxembourgian"}}
 	Macedonian = Language{
 		Codes:       []Code{MK, MKD, MAC},
 		EnglishName: "Macedonian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Македонски", "Makedonski"}}
 	Malagasy = Language{
 		Codes:       []Code{MG, MLG},
 		EnglishName: "Malagasy",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"مَلَغَسِ"},
 		Variants: []Variant{
 			{Code: BHR, EnglishName: "Bara Malagasy"},
@@ -770,6 +862,7 @@ var (
 		EnglishName: "Malay",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"بهاس ملايو", "bahasa Melayu"},
 		Variants: []Variant{
 			{Code: BJN, EnglishName: "Banjar"},
@@ -812,37 +905,43 @@ var (
 		EnglishName: "Malayalam",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Dravidian,
 		NativeNames: []string{"മലയാളം", "Malayāļã"}}
 	Maltese = Language{
 		Codes:       []Code{MT, MLT},
 		EnglishName: "Maltese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      AfroAsiatic,
 		NativeNames: []string{"Malti"}}
 	Manx = Language{
 		Codes:       []Code{GV, GLV},
 		EnglishName: "Manx",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Gaelg", "Gailck"}}
 	Maori = Language{
 		Codes:       []Code{MI, MRI, MAO},
 		EnglishName: "Maori",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"reo Māori"}}
 	Marathi = Language{
 		Codes:       []Code{MR, MAR},
 		EnglishName: "Marathi",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"मराठी", "Marāṭhī", "Maharashtran"}}
 	Marshallese = Language{
 		Codes:       []Code{MH, MAH},
 		EnglishName: "Marshallese",
 		Scope:       Individual,
 		Type:        Living,
-		NativeNames: []string{"kajin M̧ajel‌̧", "Ebon"}}
+		Family:      Austronesian,
+		NativeNames: []string{"kajin M̧ajel\u200c", "Ebon"}}
 	Mongolian = Language{
 		Codes:       []Code{MN, MON},
 		EnglishName: "Mongolian",
@@ -860,36 +959,38 @@ var (
 		EnglishName: "Nauru",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"dorerin Naoe", "Nauruan"}}
 	Navajo = Language{
 		Codes:       []Code{NV, NAV},
 		EnglishName: "Navajo",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NaDene,
 		NativeNames: []string{"Navaho", "Diné bizaad", "Naabeehó bizaad"}}
-	NorthNdebele = Language{
+	Ndebele = Language{
 		Codes:       []Code{ND, NDE},
 		EnglishName: "North Ndebele",
 		Scope:       Individual,
 		Type:        Living,
-		NativeNames: []string{"isiNdebele"}}
-	SouthNdebele = Language{
-		Codes:       []Code{NR, NBL},
-		EnglishName: "South Ndebele",
-		Scope:       Individual,
-		Type:        Living,
-		NativeNames: []string{"isiNdebele"}}
+		Family:      NigerCongo,
+		NativeNames: []string{"isiNdebele", "siNdebele", "Sumayela Ndebele"},
+		Variants: []Variant{
+			{Code: NR, EnglishName: "South Ndebele"},
+			{Code: NBL, EnglishName: "South Ndebele"}}}
 	Ndonga = Language{
 		Codes:       []Code{NG, NDO},
 		EnglishName: "Ndonga",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Oshiwambo"}}
 	Nepali = Language{
 		Codes:       []Code{NE, NEP},
 		EnglishName: "Nepali",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"नेपाली", "Nepālī"},
 		Variants: []Variant{
 			{Code: DTY, EnglishName: "Dotyali"},
@@ -911,12 +1012,14 @@ var (
 		EnglishName: "Occitan",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 	}
 	Ojibwa = Language{
 		Codes:       []Code{OJ, OJI},
 		EnglishName: "Ojibwa",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Algic,
 		NativeNames: []string{"ᐊᓂᔑᓈᐯᒧᐎᓐ", "Anishinaabemowin"},
 		Variants: []Variant{
 			{Code: CIW, EnglishName: "Chippewa"},
@@ -931,6 +1034,7 @@ var (
 		EnglishName: "Oriya",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"ଓଡ଼ିଆ", "Odia"},
 		Variants: []Variant{
 			{Code: ORY, EnglishName: "Odia"},
@@ -940,6 +1044,7 @@ var (
 		EnglishName: "Oromo",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      AfroAsiatic,
 		NativeNames: []string{"afaan Oromoo"},
 		Variants: []Variant{
 			{Code: GAX, EnglishName: "Borana-Arsi-Guji Oromo"},
@@ -951,12 +1056,14 @@ var (
 		EnglishName: "Ossetian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Ossetic", "дигорон Ӕвзаг", "digoron Ævzag"}}
 	Pali = Language{
 		Codes:       []Code{PI, PLI},
 		EnglishName: "Pali",
 		Scope:       Individual,
 		Type:        Ancient,
+		Family:      IndoEuropean,
 	}
 	Pashto = Language{
 		Codes:       []Code{PS, PUS},
@@ -988,24 +1095,28 @@ var (
 		EnglishName: "Polish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Polski"}}
 	Portuguese = Language{
 		Codes:       []Code{PT, POR},
 		EnglishName: "Portuguese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Português"}}
 	Punjabi = Language{
 		Codes:       []Code{PA, PAN},
 		EnglishName: "Punjabi",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"ਪੰਜਾਬੀ", "Panjabi", "پنجابی", "Pãjābī"}}
 	Quechua = Language{
 		Codes:       []Code{QU, QUE},
 		EnglishName: "Quechua",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      Quechuan,
 		NativeNames: []string{"Runa simi", "kichwa simi", "Nuna shimi"},
 		Variants: []Variant{
 			{Code: QUB, EnglishName: "Huallaga Huánuco Quechua"},
@@ -1056,6 +1167,7 @@ var (
 		EnglishName: "Romanian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Românã", "Moldavian", " Moldovan"},
 		Variants: []Variant{
 			{Code: MO, EnglishName: "Moldavian"},
@@ -1065,36 +1177,42 @@ var (
 		EnglishName: "Romansh",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Rumantsch", "Rumàntsch", "Romauntsch", "Romontsch"}}
 	Rundi = Language{
 		Codes:       []Code{RN, RUN},
 		EnglishName: "Rundi",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Ikirundi"}}
 	Russian = Language{
 		Codes:       []Code{RU, RUS},
 		EnglishName: "Russian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Русский язык", "Russkiĭ âzyk"}}
 	NorthernSami = Language{
 		Codes:       []Code{SE, SME},
 		EnglishName: "Northern Sami",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Uralic,
 		NativeNames: []string{"Davvisámegiella"}}
 	Samoan = Language{
 		Codes:       []Code{SM, SMO},
 		EnglishName: "Samoan",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"gagana Sāmoa", "Sāmoa"}}
 	Sango = Language{
 		Codes:       []Code{SG, SAG},
 		EnglishName: "Sango",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Creole,
 		NativeNames: []string{"yângâ tî Sängö"}}
 	Sanskrit = Language{
 		Codes:       []Code{SA, SAN},
@@ -1113,6 +1231,7 @@ var (
 		EnglishName: "Sardinian",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Sardu"},
 		Variants: []Variant{
 			{Code: SDC, EnglishName: "Sassarese Sardinian"},
@@ -1124,60 +1243,70 @@ var (
 		EnglishName: "Serbian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Српски", "Srpski"}}
 	Shona = Language{
 		Codes:       []Code{SN, SNA},
 		EnglishName: "Shona",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"chiShona"}}
 	Sindhi = Language{
 		Codes:       []Code{SD, SND},
 		EnglishName: "Sindhi",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"سنڌي", "सिन्धी", "Sindhī"}}
 	Sinhala = Language{
 		Codes:       []Code{SI, SIN},
 		EnglishName: "Sinhala",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Sinhalese", "සිංහල", "Sinhala"}}
 	Slovak = Language{
 		Codes:       []Code{SK, SLK, SLO},
 		EnglishName: "Slovak",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Slovenčina"}}
 	Slovenian = Language{
 		Codes:       []Code{SL, SLV},
 		EnglishName: "Slovenian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Slovenščina"}}
 	Somali = Language{
 		Codes:       []Code{SO, SOM},
 		EnglishName: "Somali",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      AfroAsiatic,
 		NativeNames: []string{"Soomaali", "𐒈𐒝𐒑𐒛𐒐𐒘", "سٝومالِ"}}
-	SouthernSotho = Language{
+	Sotho = Language{
 		Codes:       []Code{ST, SOT},
-		EnglishName: "Southern Sotho",
+		EnglishName: "Sotho",
 		Scope:       Individual,
 		Type:        Living,
-		NativeNames: []string{"Sesotho"}}
+		Family:      NigerCongo,
+		NativeNames: []string{"Sesotho", "Southern Sotho"}}
 	Spanish = Language{
 		Codes:       []Code{ES, SPA},
 		EnglishName: "Spanish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Castilian", "Español", "Castellano"}}
 	Sundanese = Language{
 		Codes:       []Code{SU, SUN},
 		EnglishName: "Sundanese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"basa Sunda", "ᮘᮞ ᮞᮥᮔ᮪ᮓ", "بَاسَا سُوْندَا"}}
 	Swahili = Language{
 		Codes:       []Code{SW, SWA},
@@ -1196,119 +1325,140 @@ var (
 		EnglishName: "Swati",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"SiSwati"}}
 	Swedish = Language{
 		Codes:       []Code{SV, SWE},
 		EnglishName: "Swedish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Svenska"}}
 	Tagalog = Language{
 		Codes:       []Code{TL, TGL},
 		EnglishName: "Tagalog",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"Wikang Tagalog"}}
 	Tahitian = Language{
 		Codes:       []Code{TY, TAH},
 		EnglishName: "Tahitian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"reo Tahiti", "Reo Mā`ohi"}}
 	Tajik = Language{
 		Codes:       []Code{TG, TGK},
 		EnglishName: "Tajik",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Тоҷикӣ", "Tojikī"}}
 	Tamil = Language{
 		Codes:       []Code{TA, TAM},
 		EnglishName: "Tamil",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Dravidian,
 		NativeNames: []string{"தமிழ்", "Tamiḻ"}}
 	Tatar = Language{
 		Codes:       []Code{TT, TAT},
 		EnglishName: "Tatar",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Татар теле", "Tatar tele", "تاتار تئلئ"}}
 	Telugu = Language{
 		Codes:       []Code{TE, TEL},
 		EnglishName: "Telugu",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Dravidian,
 		NativeNames: []string{"తెలుగు"}}
 	Thai = Language{
 		Codes:       []Code{TH, THA},
 		EnglishName: "Thai",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      TaiKadai,
 		NativeNames: []string{"ภาษาไทย", "Phasa Thai"}}
 	Tibetan = Language{
 		Codes:       []Code{BO, BOD, TIB},
 		EnglishName: "Tibetan",
 		Scope:       Individual,
+		Family:      SinoTibetan,
+		Type:        Living,
 		NativeNames: []string{"བོད་སྐད་", "Bodskad", "ལྷ་སའི་སྐད་", "Lhas'iskad"}}
 	Tigrinya = Language{
 		Codes:       []Code{TI, TIR},
 		EnglishName: "Tigrinya",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      AfroAsiatic,
 		NativeNames: []string{"ትግርኛ", "Təgrəñña"}}
 	Tonga = Language{
 		Codes:       []Code{TO, TON},
 		EnglishName: "Tonga",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Austronesian,
 		NativeNames: []string{"Tonga Islands", "lea faka-Tonga"}}
 	Tsonga = Language{
 		Codes:       []Code{TS, TSO},
 		EnglishName: "Tsonga",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 	}
 	Tswana = Language{
 		Codes:       []Code{TN, TSN},
 		EnglishName: "Tswana",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Setswana", "Sechuana"}}
 	Turkish = Language{
 		Codes:       []Code{TR, TUR},
 		EnglishName: "Turkish",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Türkçe"}}
 	Turkmen = Language{
 		Codes:       []Code{TK, TUK},
 		EnglishName: "Turkmen",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Türkmençe", "Түркменче", "تۆرکمنچه"}}
 	Twi = Language{
 		Codes:       []Code{TW, TWI},
 		EnglishName: "Twi",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 	}
 	Uighur = Language{
 		Codes:       []Code{UG, UIG},
 		EnglishName: "Uighur",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      Turkic,
 		NativeNames: []string{"Uyghur", "ئۇيغۇر تىلى", "Уйғур тили", "Uyƣur tili"}}
 	Ukrainian = Language{
 		Codes:       []Code{UK, UKR},
 		EnglishName: "Ukrainian",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Українська", "Ukraїnska"}}
 	Urdu = Language{
 		Codes:       []Code{UR, URD},
 		EnglishName: "Urdu",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"اُردُو", "Urduw"}}
 	Uzbek = Language{
 		Codes:       []Code{UZ, UZB},
@@ -1327,12 +1477,14 @@ var (
 		EnglishName: "Venda",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"Tshivenḓa"}}
 	Vietnamese = Language{
 		Codes:       []Code{VI, VIE},
 		EnglishName: "Vietnamese",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      AustroAsiatic,
 		NativeNames: []string{"Tiếng Việt"}}
 	Volapük = Language{
 		Codes:       []Code{VO, VOL},
@@ -1345,36 +1497,42 @@ var (
 		EnglishName: "Walloon",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Walon"}}
 	Welsh = Language{
 		Codes:       []Code{CY, CYM, WEL},
 		EnglishName: "Welsh",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      IndoEuropean,
 		NativeNames: []string{"Cymraeg"}}
 	Wolof = Language{
 		Codes:       []Code{WO, WOL},
 		EnglishName: "Wolof",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"وࣷلࣷفْ"}}
 	Xhosa = Language{
 		Codes:       []Code{XH, XHO},
 		EnglishName: "Xhosa",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"isiXhosa"}}
 	SichuanYi = Language{
 		Codes:       []Code{II, III},
 		EnglishName: "Sichuan Yi",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      SinoTibetan,
 		NativeNames: []string{"Nuosu", "ꆈꌠꉙ", "Nuosuhxop"}}
 	Yoruba = Language{
 		Codes:       []Code{YO, YOR},
 		EnglishName: "Yoruba",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"èdè Yorùbá"}}
 	Yiddish = Language{
 		Codes:       []Code{YI, YID},
@@ -1393,6 +1551,7 @@ var (
 		EnglishName: "Zhuang",
 		Scope:       Macro,
 		Type:        Living,
+		Family:      KraDai,
 		NativeNames: []string{"Chuang", "話僮", "Vahcuengh"},
 		Variants: []Variant{
 			{Code: ZCH, EnglishName: "Central Hongshuihe Zhuang"},
@@ -1417,6 +1576,7 @@ var (
 		EnglishName: "Zulu",
 		Scope:       Individual,
 		Type:        Living,
+		Family:      NigerCongo,
 		NativeNames: []string{"isiZulu"}}
 	AncientGreek = Language{
 		Codes:       []Code{GRC},

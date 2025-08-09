@@ -636,9 +636,9 @@ const (
 	Individual Scope = "Individual"
 	Macro      Scope = "Macrolanguage"
 
-	Living      Type = "Living"
-	Constructed Type = "Constructed"
 	Ancient     Type = "Ancient"
+	Constructed Type = "Constructed"
+	Living      Type = "Living"
 
 	Africa       Region = "Africa"
 	Asia         Region = "Asia"
@@ -711,27 +711,42 @@ const (
 	ThaanaScript          Script = "Thaana"             // https://en.wikipedia.org/wiki/Thaana
 	TibetanScript         Script = "Tibetan"            // https://en.wikipedia.org/wiki/Tibetan_script
 
-	NorthwestCaucasian    Family = "Northwest Caucasian"      // https://en.wikipedia.org/wiki/Northwest_Caucasian_languages
-	NigerCongo            Family = "Niger–Congo"              // https://en.wikipedia.org/wiki/Niger%E2%80%93Congo_languages
-	Austronesian          Family = "Austronesian"             // https://en.wikipedia.org/wiki/Austronesian_languages
-	TransNewGuinea        Family = "Trans–New Guinea"         // https://en.wikipedia.org/wiki/Trans%E2%80%93New_Guinea_languages
-	SinoTibetan           Family = "Sino-Tibetan"             // https://en.wikipedia.org/wiki/Sino-Tibetan_languages
-	IndoEuropean          Family = "Indo-European"            // https://en.wikipedia.org/wiki/Indo-European_languages
-	Australian            Family = "Australian"               // https://en.wikipedia.org/wiki/Australian_languages
-	Afroasiatic           Family = "Afroasiatic"              // https://en.wikipedia.org/wiki/Afroasiatic_languages
-	NiloSaharan           Family = "Nilo-Saharan"             // https://en.wikipedia.org/wiki/Nilo-Saharan_languages
-	Otomanguean           Family = "Otomanguean"              // https://en.wikipedia.org/wiki/Otomanguean_languages
-	Austroasiatic         Family = "Austroasiatic"            // https://en.wikipedia.org/wiki/Austroasiatic_languages
-	KraDai                Family = "Kra-Dai"                  // https://en.wikipedia.org/wiki/Kra%E2%80%93Dai_languages
+	AfroAsiatic           Family = "Afroasiatic"    // https://en.wikipedia.org/wiki/Afroasiatic_languages
+	Algic                 Family = "Algic"          // https://en.wikipedia.org/wiki/Algic_languages
+	Arawakan              Family = "Arawakan"       // https://en.wikipedia.org/wiki/Arawakan_languages
+	AtlanticCongo         Family = "Atlantic–Congo" // https://en.wikipedia.org/wiki/Atlantic%E2%80%93Congo_languages
+	Australian            Family = "Australian"     // https://en.wikipedia.org/wiki/Australian_languages
+	AustroAsiatic         Family = "Austroasiatic"  // https://en.wikipedia.org/wiki/Austroasiatic_languages
+	Austronesian          Family = "Austronesian"   // https://en.wikipedia.org/wiki/Austronesian_languages
+	Aymaran               Family = "Aymaran"        // https://en.wikipedia.org/wiki/Aymaran_languages
+	Creole                Family = "Creole"
 	Dravidian             Family = "Dravidian"                // https://en.wikipedia.org/wiki/Dravidian_languages
-	AtlanticCongo         Family = "Atlantic–Congo"           // https://en.wikipedia.org/wiki/Atlantic%E2%80%93Congo_languages
-	NuclearTransNewGuinea Family = "Nuclear Trans–New Guinea" // https://en.wikipedia.org/wiki/Nuclear_Trans%E2%80%93New_Guinea_languages
-	PamaNyungan           Family = "Pama–Nyungan"             // https://en.wikipedia.org/wiki/Pama%E2%80%93Nyungan_languages
-	TaiKadai              Family = "Tai–Kadai"                // https://en.wikipedia.org/wiki/Tai%E2%80%93Kadai_languages
-	Arawakan              Family = "Arawakan"                 // https://en.wikipedia.org/wiki/Arawakan_languages
-	Turkic                Family = "Turkic"                   // https://en.wikipedia.org/wiki/Turkic_languages
-	Mongolic              Family = "Mongolic"                 // https://en.wikipedia.org/wiki/Mongolic_languages
+	EnglishCreole                = Creole                     // https://en.wikipedia.org/wiki/English-based_creole_languages
+	Eskaleut              Family = "Eskaleut"                 // https://en.wikipedia.org/wiki/Eskaleut_languages
+	FrenchCreole                 = Creole                     // https://en.wikipedia.org/wiki/French-based_creole_languages
+	IndoEuropean          Family = "Indo-European"            // https://en.wikipedia.org/wiki/Indo-European_languages
+	Iroquoian             Family = "Iroquoian"                // https://en.wikipedia.org/wiki/Iroquoian_languages
+	Japonic               Family = "Japonic"                  // https://en.wikipedia.org/wiki/Japonic_languages
+	Kartvelian            Family = "Kartvelian"               // https://en.wikipedia.org/wiki/Kartvelian_languages
+	Koreanic              Family = "Koreanic"                 // https://en.wikipedia.org/wiki/Koreanic_languages
+	KraDai                Family = "Kra-Dai"                  // https://en.wikipedia.org/wiki/Kra%E2%80%93Dai_languages
 	LanguageIsolate       Family = "Language isolate"         // https://en.wikipedia.org/wiki/Language_isolate
+	Mongolic              Family = "Mongolic"                 // https://en.wikipedia.org/wiki/Mongolic_languages
+	NaDene                Family = "Na-Dene"                  // https://en.wikipedia.org/wiki/Na-Dene_languages
+	NigerCongo            Family = "Niger–Congo"              // https://en.wikipedia.org/wiki/Niger%E2%80%93Congo_languages
+	NiloSaharan           Family = "Nilo-Saharan"             // https://en.wikipedia.org/wiki/Nilo-Saharan_languages
+	NortheastCaucasian    Family = "Northeast Caucasian"      // https://en.wikipedia.org/wiki/Northeast_Caucasian_languages
+	NorthwestCaucasian    Family = "Northwest Caucasian"      // https://en.wikipedia.org/wiki/Northwest_Caucasian_languages
+	NuclearTransNewGuinea Family = "Nuclear Trans–New Guinea" // https://en.wikipedia.org/wiki/Nuclear_Trans%E2%80%93New_Guinea_languages
+	Otomanguean           Family = "Otomanguean"              // https://en.wikipedia.org/wiki/Otomanguean_languages
+	PamaNyungan           Family = "Pama–Nyungan"             // https://en.wikipedia.org/wiki/Pama%E2%80%93Nyungan_languages
+	Quechuan              Family = "Quechuan"                 // https://en.wikipedia.org/wiki/Quechuan_languages
+	SinoTibetan           Family = "Sino-Tibetan"             // https://en.wikipedia.org/wiki/Sino-Tibetan_languages
+	TaiKadai              Family = "Tai–Kadai"                // https://en.wikipedia.org/wiki/Tai%E2%80%93Kadai_languages
+	TransNewGuinea        Family = "Trans–New Guinea"         // https://en.wikipedia.org/wiki/Trans%E2%80%93New_Guinea_languages
+	Turkic                Family = "Turkic"                   // https://en.wikipedia.org/wiki/Turkic_languages
+	Tupian                Family = "Tupian"                   // https://en.wikipedia.org/wiki/Tupian_languages
+	Uralic                Family = "Uralic"                   // https://en.wikipedia.org/wiki/Uralic_languages
 )
 
 // LanguageMap is the list of language codes mapped to their model.
@@ -811,6 +826,9 @@ var LanguageMap = map[Code]Language{
 	HRV: Croatian,
 	CS:  Czech,
 	CES: Czech,
+	CU:  ChurchSlavic,
+	CHU: ChurchSlavic,
+	CHR: Cherokee,
 	CZE: Czech,
 	DA:  Danish,
 	DAN: Danish,
@@ -966,10 +984,10 @@ var LanguageMap = map[Code]Language{
 	NAU: Nauru,
 	NV:  Navajo,
 	NAV: Navajo,
-	ND:  NorthNdebele,
-	NDE: NorthNdebele,
-	NR:  SouthNdebele,
-	NBL: SouthNdebele,
+	ND:  Ndebele,
+	NDE: Ndebele,
+	NR:  Ndebele,
+	NBL: Ndebele,
 	NG:  Ndonga,
 	NDO: Ndonga,
 	NE:  Nepali,
@@ -1035,8 +1053,8 @@ var LanguageMap = map[Code]Language{
 	SLV: Slovenian,
 	SO:  Somali,
 	SOM: Somali,
-	ST:  SouthernSotho,
-	SOT: SouthernSotho,
+	ST:  Sotho,
+	SOT: Sotho,
 	ES:  Spanish,
 	SPA: Spanish,
 	SU:  Sundanese,
