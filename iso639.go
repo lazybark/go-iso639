@@ -1,5 +1,7 @@
 package iso639
 
+import "slices"
+
 type Code string
 type Type string
 type Scope string
@@ -29,10 +31,8 @@ type Variant struct {
 // ByCode fetches a language by its Alpha-1,2 or 3 code or by variant code.
 func ByCode(code string) *Language {
 	for _, lang := range LanguageMap {
-		for _, langCode := range lang.Codes {
-			if langCode == Code(code) {
-				return &lang
-			}
+		if slices.Contains(lang.Codes, Code(code)) {
+			return &lang
 		}
 
 		for _, variant := range lang.Variants {
@@ -52,10 +52,8 @@ func ByName(name string) *Language {
 			return &lang
 		}
 
-		for _, nativeName := range lang.NativeNames {
-			if nativeName == name {
-				return &lang
-			}
+		if slices.Contains(lang.NativeNames, name) {
+			return &lang
 		}
 
 		for _, variant := range lang.Variants {
@@ -63,10 +61,8 @@ func ByName(name string) *Language {
 				return &lang
 			}
 
-			for _, nativeName := range variant.NativeNames {
-				if nativeName == name {
-					return &lang
-				}
+			if slices.Contains(variant.NativeNames, name) {
+				return &lang
 			}
 		}
 	}
@@ -118,11 +114,8 @@ func ByScript(script string) []Language {
 	langs := make([]Language, 0)
 
 	for _, lang := range LanguageMap {
-		for _, langScript := range lang.Scripts {
-			if langScript == Script(script) {
-				langs = append(langs, lang)
-				break
-			}
+		if slices.Contains(lang.Scripts, Script(script)) {
+			langs = append(langs, lang)
 		}
 	}
 
@@ -134,11 +127,8 @@ func ByRegion(region string) []Language {
 	langs := make([]Language, 0)
 
 	for _, lang := range LanguageMap {
-		for _, langRegion := range lang.Regions {
-			if langRegion == Region(region) {
-				langs = append(langs, lang)
-				break
-			}
+		if slices.Contains(lang.Regions, Region(region)) {
+			langs = append(langs, lang)
 		}
 	}
 
